@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post",
+  "info": {
+    "name": "Příspěvky"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "obsah": {
+      "type": "richtext",
+      "default": "content"
+    },
+    "nadpis": {
+      "type": "string",
+      "default": "heading"
+    },
+    "precteno": {
+      "type": "integer",
+      "private": true
+    },
+    "kategorie": {
+      "type": "enumeration",
+      "enum": [
+        "ubytovani",
+        "aktuality",
+        "vylety",
+        "nejctenejsi",
+        "rady_tipy"
+      ]
+    }
+  }
+}

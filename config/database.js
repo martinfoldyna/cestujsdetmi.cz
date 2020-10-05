@@ -1,20 +1,34 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  // defaultConnection: 'default',
+  // connections: {
+  //   default: {
+  //     connector: 'mongoose',
+  //     settings: {
+  //       host: env('DATABASE_HOST', 'cestujsdetmi.r1glt.mongodb.net'),
+  //       srv: env.bool('DATABASE_SRV', true),
+  //       port: env.int('DATABASE_PORT', 27017),
+  //       database: env('DATABASE_NAME', 'cestujsdetmi'),
+  //       username: env('DATABASE_USERNAME', 'admin'),
+  //       password: env('DATABASE_PASSWORD', 'G2vP8afnCFluBqcM'),
+  //     },
+  //     options: {
+  //       authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
+  //       ssl: env.bool('DATABASE_SSL', true),
+  //     },
+  //   },
+  // },
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'mongoose',
+      connector: "mongoose",
       settings: {
-        host: env('DATABASE_HOST', '127.0.0.1'),
-        srv: env.bool('DATABASE_SRV', false),
-        port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'cestujsdetmi'),
-        username: env('DATABASE_USERNAME', ''),
-        password: env('DATABASE_PASSWORD', ''),
+        uri: "mongodb+srv://admin:G2vP8afnCFluBqcM@cestujsdetmi.r1glt.mongodb.net/cestujsdetmi?retryWrites=true&w=majority"
       },
       options: {
-        authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        ssl: env.bool('DATABASE_SSL', false),
-      },
-    },
-  },
+        ssl: true
+      }
+    }
+  }
 });
+
+//mongodb+srv://admin:<password>@cestujsdetmi.r1glt.mongodb.net/<dbname>?retryWrites=true&w=majority

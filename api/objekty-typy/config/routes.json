@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/objekty-typies",
+      "handler": "objekty-typy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekty-typies/count",
+      "handler": "objekty-typy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekty-typies/:id",
+      "handler": "objekty-typy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekty-typies/by-value/:value",
+      "handler": "objekty-typy.findOneByValue",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/objekty-typies",
+      "handler": "objekty-typy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/objekty-typies/:id",
+      "handler": "objekty-typy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/objekty-typies/:id",
+      "handler": "objekty-typy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

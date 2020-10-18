@@ -6,16 +6,14 @@
  */
 
 module.exports = {
-  async create(ctx) {
-    await strapi.plugins.email.services.email.send({
-      to: 'martifoldyna@gmail.com',
-      from: 'admin@strapi.io',
-      subject: 'Comment posted that contains a bad words',
-      text: `
-          The comment contain a bad words.
-        `,
-    });
-
-    return "strapi"
-  }
+  // async find(ctx) {
+  //
+  //   // Send an email to validate his subscriptions.
+  //   strapi.services.email.send('welcome@mysite.com', "martin.foldyna@me.com", 'Welcome', 'Hello world');
+  //
+  //   // Send response to the server.
+  //   ctx.send({
+  //     ok: true,
+  //   });
+  // }
 };

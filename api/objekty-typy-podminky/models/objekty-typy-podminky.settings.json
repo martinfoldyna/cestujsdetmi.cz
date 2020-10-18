@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objekty_typy_podminkies",
+  "info": {
+    "name": "Objekty_typy_podminky"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "rocni_poplatek": {
+      "type": "boolean",
+      "default": true
+    },
+    "registrace_zapisu": {
+      "type": "string"
+    },
+    "editace_zapisu": {
+      "type": "boolean",
+      "default": false
+    },
+    "fotografie_objektu": {
+      "type": "integer"
+    },
+    "zakladni_popis": {
+      "type": "boolean",
+      "default": false
+    },
+    "kontaktni_informace": {
+      "type": "boolean",
+      "default": false
+    },
+    "informace_o_pocasi": {
+      "type": "boolean",
+      "default": false
+    },
+    "doporuceni_pratelum": {
+      "type": "boolean",
+      "default": false
+    },
+    "dostupnost": {
+      "type": "boolean",
+      "default": false
+    },
+    "odkaz_na_vlastni_web": {
+      "type": "boolean",
+      "default": false
+    },
+    "podrobny_popis": {
+      "type": "boolean",
+      "default": false
+    },
+    "cenik": {
+      "type": "boolean",
+      "default": false
+    },
+    "poskytovane_slevy": {
+      "type": "boolean",
+      "default": false
+    },
+    "aktivni_mapa": {
+      "type": "boolean",
+      "default": false
+    },
+    "rucni_indexace_vyhledavace": {
+      "type": "boolean",
+      "default": false
+    },
+    "razeni_pred_standard": {
+      "type": "boolean",
+      "default": false
+    },
+    "razeni_pred_optimal": {
+      "type": "boolean",
+      "default": false
+    },
+    "zarazeni_v_tipech": {
+      "type": "boolean",
+      "default": false
+    },
+    "bez_reklam": {
+      "type": "boolean",
+      "default": false
+    },
+    "last_minute": {
+      "type": "boolean",
+      "default": false
+    },
+    "rotace_na_hl_strance": {
+      "type": "boolean",
+      "default": false
+    },
+    "vlozeni_na_facebook": {
+      "type": "boolean",
+      "default": false
+    },
+    "banerova_reklama": {
+      "type": "boolean",
+      "default": false
+    },
+    "razeni_pred_premium": {
+      "type": "boolean",
+      "default": false
+    },
+    "aktualni_nabidky_facebook": {
+      "type": "boolean",
+      "default": false
+    },
+    "cileny_mailing": {
+      "type": "boolean",
+      "default": false
+    },
+    "rocni_aktualita_na_hl_str": {
+      "type": "boolean",
+      "default": false
+    },
+    "objekty_typy_id": {
+      "model": "objekty-typy",
+      "via": "objekty_typy_podminky"
+    }
+  }
+}

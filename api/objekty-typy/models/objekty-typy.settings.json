@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objekty_typies",
+  "info": {
+    "name": "Objekty_typy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "richtext"
+    },
+    "cena": {
+      "type": "integer"
+    },
+    "hodnota": {
+      "type": "string"
+    },
+    "objekty_typy_podminky": {
+      "via": "objekty_typy_id",
+      "model": "objekty-typy-podminky"
+    }
+  }
+}

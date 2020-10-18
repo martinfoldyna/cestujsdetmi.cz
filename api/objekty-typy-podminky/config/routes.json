@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/objekty-typy-podminkies",
+      "handler": "objekty-typy-podminky.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekty-typy-podminkies/count",
+      "handler": "objekty-typy-podminky.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekty-typy-podminkies/:id",
+      "handler": "objekty-typy-podminky.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/objekty-typy-podminkies",
+      "handler": "objekty-typy-podminky.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/objekty-typy-podminkies/:id",
+      "handler": "objekty-typy-podminky.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/objekty-typy-podminkies/:id",
+      "handler": "objekty-typy-podminky.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

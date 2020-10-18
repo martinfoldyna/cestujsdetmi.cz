@@ -888,6 +888,16 @@
   dependencies:
     sift "^13.0.0"
 
+"@ckeditor/ckeditor5-build-classic@^23.0.0":
+  version "23.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-classic/-/ckeditor5-build-classic-23.0.0.tgz#9b4ae5dc470e9ae4be14672b49d05d21887e2d81"
+
+"@ckeditor/ckeditor5-react@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-react/-/ckeditor5-react-2.1.0.tgz#f612546a5a328899a436d71b72ffd632600049e8"
+  dependencies:
+    prop-types "^15.6.1"
+
 "@emotion/cache@^10.0.27", "@emotion/cache@^10.0.9":
   version "10.0.29"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-10.0.29.tgz#87e7e64f412c060102d589fe7c6dc042e6f9d1e0"
@@ -1083,6 +1093,28 @@
   version "3.10.4"
   resolved "https://registry.yarnpkg.com/@sailshq/lodash/-/lodash-3.10.4.tgz#2299648a81a67f4c6ee222c6cf8e261bd9c3fa50"
 
+"@sendgrid/client@^6.4.0":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-6.5.5.tgz#66cf569445d98a795998a894bb432a9939ead7c3"
+  dependencies:
+    "@sendgrid/helpers" "^6.5.5"
+    "@types/request" "^2.48.4"
+    request "^2.88.0"
+
+"@sendgrid/helpers@^6.4.0", "@sendgrid/helpers@^6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-6.5.5.tgz#de6de9b94794fbf834b4f66a7d44af84bf736459"
+  dependencies:
+    chalk "^2.0.1"
+    deepmerge "^4.2.2"
+
+"@sendgrid/mail@6.4.0":
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-6.4.0.tgz#21d022f7fae57dcdc5910eeca5ed318df21e5f51"
+  dependencies:
+    "@sendgrid/client" "^6.4.0"
+    "@sendgrid/helpers" "^6.4.0"
+
 "@sentry/core@5.24.2":
   version "5.24.2"
   resolved "https://registry.yarnpkg.com/@sentry/core/-/core-5.24.2.tgz#1724652855c0887a690c3fc6acd2519d4072b511"
@@ -1158,6 +1190,10 @@
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
 
+"@types/caseless@*":
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@types/caseless/-/caseless-0.12.2.tgz#f65d3d6389e01eeb458bd54dc8f52b95a9463bc8"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -1217,6 +1253,19 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
+
+"@types/request@^2.48.4":
+  version "2.48.5"
+  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.5.tgz#019b8536b402069f6d11bee1b2c03e7f232937a0"
+  dependencies:
+    "@types/caseless" "*"
+    "@types/node" "*"
+    "@types/tough-cookie" "*"
+    form-data "^2.5.0"
+
+"@types/tough-cookie@*":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.0.tgz#fef1904e4668b6e5ecee60c52cc6a078ffa6697d"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -2696,6 +2745,10 @@ deepmerge@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
 
+deepmerge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
+
 default-gateway@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/default-gateway/-/default-gateway-4.2.0.tgz#167104c7500c2115f6dd69b0a536bb8ed720552b"
@@ -3418,6 +3471,10 @@ fn-name@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
 
+fn-name@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-3.0.0.tgz#0596707f635929634d791f452309ab41558e3c5c"
+
 follow-redirects@1.5.10:
   version "1.5.10"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
@@ -3439,6 +3496,14 @@ for-in@^1.0.2:
 forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
+
+form-data@^2.5.0:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.5.1.tgz#f2cbec57b5e59e23716e128fe44d4e5dd23895f4"
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.6"
+    mime-types "^2.1.12"
 
 form-data@~2.3.2:
   version "2.3.3"
@@ -5399,6 +5464,10 @@ nodemailer-shared@1.1.0:
   dependencies:
     nodemailer-fetch "1.6.0"
 
+nodemailer@^6.4.14:
+  version "6.4.14"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.14.tgz#2ffb160b63ff0c15a979da75e1f82af85433d2a3"
+
 noop-logger@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/noop-logger/-/noop-logger-0.1.1.tgz#94a2b1633c4f1317553007d8966fd0e841b6a4c2"
@@ -5960,6 +6029,10 @@ prop-types@^15.5.0, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0,
 property-expr@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/property-expr/-/property-expr-1.5.1.tgz#22e8706894a0c8e28d58735804f6ba3a3673314f"
+
+property-expr@^2.0.2:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/property-expr/-/property-expr-2.0.4.tgz#37b925478e58965031bb612ec5b3260f8241e910"
 
 proxy-addr@~2.0.5:
   version "2.0.6"
@@ -6624,7 +6697,7 @@ request-oauth@^1.0.0:
     qs "^6.9.3"
     uuid "^3.4.0"
 
-request@^2.83.0:
+request@^2.83.0, request@^2.88.0:
   version "2.88.2"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
   dependencies:
@@ -7573,6 +7646,13 @@ strapi-plugin-users-permissions@3.1.6:
     strapi-utils "3.1.6"
     uuid "^3.1.0"
 
+strapi-provider-email-sendgrid@^3.1.7:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-sendgrid/-/strapi-provider-email-sendgrid-3.2.4.tgz#e592a69fb2f62acdeb75d0482de92b7aeac99b34"
+  dependencies:
+    "@sendgrid/mail" "6.4.0"
+    strapi-utils "3.2.4"
+
 strapi-provider-email-sendmail@3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/strapi-provider-email-sendmail/-/strapi-provider-email-sendmail-3.1.6.tgz#cf29ebe2cff58265f5313a78d7ba796c2bebe76a"
@@ -7594,6 +7674,17 @@ strapi-utils@3.1.6:
     pino "^4.7.1"
     pluralize "^8.0.0"
     yup "0.28.1"
+
+strapi-utils@3.2.4, strapi-utils@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/strapi-utils/-/strapi-utils-3.2.4.tgz#15050faeb3b4aad9b12dc928b87aaa269950777a"
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "^2.8.1"
+    lodash "4.17.19"
+    pino "^4.7.1"
+    pluralize "^8.0.0"
+    yup "0.29.3"
 
 strapi@3.1.6:
   version "3.1.6"
@@ -7827,6 +7918,10 @@ switchback@^2.0.1:
 symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+
+synchronous-promise@^2.0.13:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
 
 synchronous-promise@^2.0.6:
   version "2.0.13"
@@ -8516,6 +8611,18 @@ yup@0.28.1:
     lodash-es "^4.17.11"
     property-expr "^1.5.0"
     synchronous-promise "^2.0.6"
+    toposort "^2.0.2"
+
+yup@0.29.3:
+  version "0.29.3"
+  resolved "https://registry.yarnpkg.com/yup/-/yup-0.29.3.tgz#69a30fd3f1c19f5d9e31b1cf1c2b851ce8045fea"
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    fn-name "~3.0.0"
+    lodash "^4.17.15"
+    lodash-es "^4.17.11"
+    property-expr "^2.0.2"
+    synchronous-promise "^2.0.13"
     toposort "^2.0.2"
 
 yup@^0.27.0:

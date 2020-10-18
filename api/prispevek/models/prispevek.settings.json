@@ -19,7 +19,7 @@
     },
     "precteno": {
       "type": "integer",
-      "private": true
+      "private": false
     },
     "kategorie": {
       "type": "enumeration",

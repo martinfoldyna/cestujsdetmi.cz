@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_oteviraci_doba_oteviraci_dobas",
+  "info": {
+    "name": "Otevírací-doba",
+    "icon": "stopwatch"
+  },
+  "options": {},
+  "attributes": {
+    "datum_zacatku": {
+      "type": "datetime"
+    },
+    "datum_konce": {
+      "type": "datetime"
+    },
+    "popis": {
+      "type": "string"
+    }
+  }
+}

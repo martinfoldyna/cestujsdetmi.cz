@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/components",
+      "handler": "components.find",
+      "config": {
+        "policies": []
+      }
+    }
+  ]}

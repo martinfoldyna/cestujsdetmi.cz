@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_last_minute_last_minutes",
+  "info": {
+    "name": "Last Minute",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "popis": {
+      "type": "richtext"
+    },
+    "odkaz_na_web": {
+      "type": "string"
+    }
+  }
+}

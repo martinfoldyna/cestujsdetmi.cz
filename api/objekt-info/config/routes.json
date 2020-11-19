@@ -2,56 +2,56 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/prispeveks",
-      "handler": "prispevek.find",
+      "path": "/objekt-infos",
+      "handler": "objekt-info.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/prispeveks/lite",
-      "handler": "prispevek.findLite",
+      "path": "/objekt-infos/count",
+      "handler": "objekt-info.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/prispeveks/count",
-      "handler": "prispevek.count",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/prispeveks/:id",
-      "handler": "prispevek.findOne",
+      "path": "/objekt-infos/:id",
+      "handler": "objekt-info.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/prispeveks",
-      "handler": "prispevek.create",
+      "path": "/objekt-infos",
+      "handler": "objekt-info.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/prispeveks/:id",
-      "handler": "prispevek.update",
+      "path": "/objekt-infos/:id",
+      "handler": "objekt-info.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/objekt-infos/addReview/:id",
+      "handler": "objekt-info.addReview",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/prispeveks/:id",
-      "handler": "prispevek.delete",
+      "path": "/objekt-infos/:id",
+      "handler": "objekt-info.delete",
       "config": {
         "policies": []
       }

@@ -1,0 +1,157 @@
+{
+  "collectionName": "components_vnejsi_vybaveni_vnejsi_vybaveni",
+  "info": {
+    "name": "Vnější vybavení",
+    "icon": "air-freshener"
+  },
+  "options": {},
+  "attributes": {
+    "badminton": {
+      "type":"boolean"
+    },
+    "bazen":{
+      "type": "boolean"
+    },
+    "brouzdaliste": {
+      "type": "boolean"
+    },
+    "cyklo_sedacka":{
+      "type": "boolean"
+    },
+    "detska_lyzarska_skolicka": {
+      "type": "boolean"
+    },
+    "detska_sjezdovka":{
+      "type": "boolean"
+    },
+    "detsky_domecek": {
+      "type": "boolean"
+    },
+    "detsky_koutek":{
+      "type": "boolean"
+    },
+    "detsky_lyzarsky_vlek": {
+      "type": "boolean"
+    },
+    "dobove_hry":{
+      "type": "boolean"
+    },
+    "fotbalove_hriste": {
+      "type": "boolean"
+    },
+    "houpacka":{
+      "type": "boolean"
+    },
+    "hriste": {
+      "type": "boolean"
+    },
+    "indianske_typi":{
+      "type": "boolean"
+    },
+    "klouzacka": {
+      "type": "boolean"
+    },
+    "kocarek":{
+      "type": "boolean"
+    },
+    "kolotoc": {
+      "type": "boolean"
+    },
+    "krosna_na_dite":{
+      "type": "boolean"
+    },
+    "lanove_atrakce": {
+      "type": "boolean"
+    },
+    "lezecka_stena":{
+      "type": "boolean"
+    },
+    "lyzarska_skola": {
+      "type": "boolean"
+    },
+    "mikrovlnka":{
+      "type": "boolean"
+    },
+    "minigolf": {
+      "type": "boolean"
+    },
+    "minizoo":{
+      "type": "boolean"
+    },
+    "vstup_s_kocarkem": {
+      "type": "boolean"
+    },
+    "odrazedlo":{
+      "type": "boolean"
+    },
+    "ohniste_grill_krb": {
+      "type": "boolean"
+    },
+    "parkoviste":{
+      "type": "boolean"
+    },
+    "petangue": {
+      "type": "boolean"
+    },
+    "piskoviste":{
+      "type": "boolean"
+    },
+    "prebalovaci_pult": {
+      "type": "boolean"
+    },
+    "programy_pro_deti":{
+      "type": "boolean"
+    },
+    "projizdky_na_konich": {
+      "type": "boolean"
+    },
+    "prulezka":{
+      "type": "boolean"
+    },
+    "pujcovna_kol": {
+      "type": "boolean"
+    },
+    "pujcovna_lyzi":{
+      "type": "boolean"
+    },
+    "pujcovna_sportovniho_vybaveni": {
+      "type": "boolean"
+    },
+    "venkovni_sporty":{
+      "type": "boolean"
+    },
+    "ruske_kuzelky": {
+      "type": "boolean"
+    },
+    "skladaci_hrad":{
+      "type": "boolean"
+    },
+    "ski_servis": {
+      "type": "boolean"
+    },
+    "stolni_tenis":{
+      "type": "boolean"
+    },
+    "tenisovy_kurt": {
+      "type": "boolean"
+    },
+    "trampolina":{
+      "type": "boolean"
+    },
+    "travnata_plocha": {
+      "type": "boolean"
+    },
+    "volejbalove_hriste":{
+      "type": "boolean"
+    },
+    "vozik_za_kolo": {
+      "type": "boolean"
+    },
+    "zahrada":{
+      "type": "boolean"
+    },
+    "zahradni_altan": {
+      "type": "boolean"
+    }
+  }
+}

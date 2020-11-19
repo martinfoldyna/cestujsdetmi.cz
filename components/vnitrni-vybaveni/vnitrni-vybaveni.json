@@ -1,0 +1,197 @@
+{
+  "collectionName": "components_vnitrni_vybaveni_vnitrni_vybavenis",
+  "info": {
+    "name": "Vnitřní vybaveni",
+    "icon": "hotel"
+  },
+  "options": {},
+  "attributes": {
+
+    "dvd_pohadky" : {
+      "type": "boolean"
+    },
+    "autodraha" : {
+      "type":  "boolean"
+    },
+    "bazen" : {
+      "type":  "boolean"
+    },
+    "bowling" : {
+      "type":  "boolean"
+    },
+    "chuvicky" : {
+      "type":  "boolean"
+    },
+    "detska_kosmetika" : {
+      "type":  "boolean"
+    },
+    "detska_postylka" : {
+      "type":  "boolean"
+    },
+    "detska_strava" : {
+      "type":  "boolean"
+    },
+    "detska_zidlicka" : {
+      "type":  "boolean"
+    },
+    "detska_luzkoviny" : {
+      "type":  "boolean"
+    },
+    "detske_menu" : {
+      "type":  "boolean"
+    },
+    "detska_plenky" : {
+      "type":  "boolean"
+    },
+    "detska_sedatko" : {
+      "type":  "boolean"
+    },
+    "detsky_domecek" : {
+      "type":  "boolean"
+    },
+    "detsky_koutek" : {
+      "type":  "boolean"
+    },
+    "detsky_pribor" : {
+      "type":  "boolean"
+    },
+    "dilnicky_pro_deti" : {
+      "type":  "boolean"
+    },
+    "mazlicci_vitani" : {
+      "type":  "boolean"
+    },
+    "dvd" : {
+      "type":  "boolean"
+    },
+    "expozice_pro_deti" : {
+      "type":  "boolean"
+    },
+    "fen" : {
+      "type":  "boolean"
+    },
+    "herna_sal" : {
+      "type":  "boolean"
+    },
+    "hlidani_deti_zdarma" : {
+      "type":  "boolean"
+    },
+    "hlidani_deti_placeny" : {
+      "type":  "boolean"
+    },
+    "hygienicke_ubrousky" : {
+      "type":  "boolean"
+    },
+    "internet_zdarma" : {
+      "type":  "boolean"
+    },
+    "internet_placeny" : {
+      "type":  "boolean"
+    },
+    "bryndacky" : {
+      "type":  "boolean"
+    },
+    "kuchynka" : {
+      "type":  "boolean"
+    },
+    "kulecnik" : {
+      "type":  "boolean"
+    },
+    "kuzelky" : {
+      "type":  "boolean"
+    },
+    "lednice" : {
+      "type":  "boolean"
+    },
+    "mikrovlnka" : {
+      "type":  "boolean"
+    },
+    "minibar" : {
+      "type":  "boolean"
+    },
+    "vstup_s_kocarkem" : {
+      "type":  "boolean"
+    },
+    "snidane_polopenze_plnapenze" : {
+      "type":  "boolean"
+    },
+    "nekuracke" : {
+      "type":  "boolean"
+    },
+    "nocnik" : {
+      "type":  "boolean"
+    },
+    "baby_friendly" : {
+      "type":  "boolean"
+    },
+    "ochrana_schodiste" : {
+      "type":  "boolean"
+    },
+    "ohrivac_lahvi" : {
+      "type":  "boolean"
+    },
+    "pohybove_hry" : {
+      "type":  "boolean"
+    },
+    "prebalovaci_pult" : {
+      "type":  "boolean"
+    },
+    "porgramy_pro_deti" : {
+      "type":  "boolean"
+    },
+    "pujcovna_hracek" : {
+      "type":  "boolean"
+    },
+    "pujcovna_sportovniho_vybaveni" : {
+      "type":  "boolean"
+    },
+    "halove_sporty" : {
+      "type":  "boolean"
+    },
+    "radio_CD" : {
+      "type":  "boolean"
+    },
+    "restaurace_jidelna" : {
+      "type":  "boolean"
+    },
+    "rucniky_luzkoviny" : {
+      "type":  "boolean"
+    },
+    "sauna" : {
+      "type":  "boolean"
+    },
+    "sipky" : {
+      "type":  "boolean"
+    },
+    "spolecenska_mistnost" : {
+      "type":  "boolean"
+    },
+    "stolni_hry" : {
+      "type":  "boolean"
+    },
+    "stolni_tenis" : {
+      "type":  "boolean"
+    },
+    "stupatko_pod_umyvadlo" : {
+      "type":  "boolean"
+    },
+    "televize" : {
+      "type":  "boolean"
+    },
+    "tensiovy_kurt" : {
+      "type":  "boolean"
+    },
+    "vanicka" : {
+      "type":  "boolean"
+    },
+    "varna_konvice" : {
+      "type":  "boolean"
+    },
+    "vytah" : {
+      "type":  "boolean"
+    },
+    "zaslepky_do_zasuvek" : {
+      "type":  "boolean"
+    }
+  }
+}

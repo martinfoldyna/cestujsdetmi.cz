@@ -5,15 +5,14 @@
  * to customize this controller
  */
 
+const sanitizeEntity = require("strapi-utils/lib/sanitize-entity");
 module.exports = {
-  // async find(ctx) {
-  //
-  //   // Send an email to validate his subscriptions.
-  //   strapi.services.email.send('welcome@mysite.com', "martin.foldyna@me.com", 'Welcome', 'Hello world');
-  //
-  //   // Send response to the server.
-  //   ctx.send({
-  //     ok: true,
-  //   });
-  // }
+  async findLite(ctx) {
+
+    let entities;
+      entities = await strapi.services.prispevek.search(ctx.query);
+    console.log(entities)
+
+    return entities;
+  }
 };

@@ -1,0 +1,13 @@
+{ "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb+srv://admin:G2vP8afnCFluBqcM@cestujsdetmi.r1glt.mongodb.net/cestujsdetmi?retryWrites=true&w=majority"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}

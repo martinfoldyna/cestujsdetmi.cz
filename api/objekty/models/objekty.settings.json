@@ -12,10 +12,10 @@
     "druh_zapisu": {
       "type": "enumeration",
       "enum": [
-        "standard",
-        "optimal",
-        "premium",
-        "premium_gold"
+        "01_standard",
+        "02_optimal",
+        "03_premium",
+        "04_premium_gold"
       ]
     },
     "typ_objektu": {
@@ -63,6 +63,22 @@
     },
     "email": {
       "type": "email"
+    },
+    "kategorie": {
+      "type": "string"
+    },
+    "kraj": {
+      "type": "string"
+    },
+    "nahledovy_obrazek": {
+      "type": "string"
+    },
+    "firebaseID": {
+      "type": "string"
+    },
+    "objekt_info": {
+      "via": "objekt",
+      "model": "objekt-info"
     }
   }
 }

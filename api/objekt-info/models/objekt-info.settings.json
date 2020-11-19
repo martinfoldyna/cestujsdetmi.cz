@@ -1,0 +1,120 @@
+{
+  "kind": "collectionType",
+  "collectionName": "objekt_infos",
+  "info": {
+    "name": "objekt_info",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "druh_zapisu": {
+      "type": "enumeration",
+      "enum": [
+        "01_standard",
+        "02_optimal",
+        "03_premium",
+        "04_premium_gold"
+      ]
+    },
+    "galerie": {
+      "type": "json"
+    },
+    "zakladni_popis": {
+      "type": "richtext"
+    },
+    "objekt": {
+      "model": "objekty",
+      "via": "objekt_info"
+    },
+    "nahledovy_obrazek": {
+      "type": "string"
+    },
+    "firebaseID": {
+      "type": "uid"
+    },
+    "podrobny_popis": {
+      "type": "richtext"
+    },
+    "konfigurace": {
+      "type": "json"
+    },
+    "vnitrni_vybaveni": {
+      "type": "component",
+      "repeatable": false,
+      "component": "vnitrni-vybaveni.vnitrni-vybaveni"
+    },
+    "vnejsi_vybaveni": {
+      "type": "component",
+      "repeatable": false,
+      "component": "vnejsi-vybaveni.vnejsi-vybaveni"
+    },
+    "hodnota": {
+      "type": "string"
+    },
+    "cenik": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cena.slevy"
+    },
+    "slevy": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cena.slevy"
+    },
+    "last_minute": {
+      "type": "component",
+      "repeatable": false,
+      "component": "last-minute.last-minute"
+    },
+    "provozni_doba": {
+      "type": "component",
+      "repeatable": true,
+      "component": "oteviraci-doba.oteviraci-doba"
+    },
+    "dostupnost": {
+      "type": "component",
+      "repeatable": false,
+      "component": "dostupnost.dostupnost"
+    },
+    "uzivatel": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "objekty"
+    },
+    "hlavni_kategorie": {
+      "type": "string"
+    },
+    "adresa": {
+      "type": "component",
+      "repeatable": false,
+      "component": "adresa.adresa"
+    },
+    "podkategorie": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "telefon": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    },
+    "zajimavosti": {
+      "type": "richtext"
+    },
+    "recenze": {
+      "type": "component",
+      "repeatable": true,
+      "component": "recenze.recenze"
+    }
+  }
+}

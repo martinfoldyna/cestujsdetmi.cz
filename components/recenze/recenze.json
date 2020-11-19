@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_recenze_recenzes",
+  "info": {
+    "name": "recenze",
+    "icon": "comment-dots"
+  },
+  "options": {},
+  "attributes": {
+    "recenze": {
+      "type": "text"
+    },
+    "hvezdicky": {
+      "type": "integer"
+    }
+  }
+}

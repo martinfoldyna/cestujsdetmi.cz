@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_dostupnost_dostupnosts",
+  "info": {
+    "name": "Dostupnost",
+    "icon": "car-alt"
+  },
+  "options": {},
+  "attributes": {
+    "mhd": {
+      "type": "string"
+    },
+    "vlak": {
+      "type": "string"
+    },
+    "metro": {
+      "type": "string"
+    },
+    "csad": {
+      "type": "string"
+    },
+    "gps": {
+      "type": "string"
+    }
+  }
+}

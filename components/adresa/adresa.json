@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_adresa_adresas",
+  "info": {
+    "name": "adresa",
+    "icon": "home"
+  },
+  "options": {},
+  "attributes": {
+    "ulice": {
+      "type": "string"
+    },
+    "oblast": {
+      "type": "string"
+    },
+    "mesto": {
+      "type": "string"
+    },
+    "kraj": {
+      "type": "string"
+    },
+    "psc": {
+      "type": "string"
+    }
+  }
+}

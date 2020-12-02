@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kategories",
+  "info": {
+    "name": "Kategorie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "hodnota": {
+      "type": "string"
+    },
+    "urceni": {
+      "type": "enumeration",
+      "enum": [
+        "ubytovani",
+        "zabava"
+      ]
+    },
+    "podkategorie": {
+      "via": "kategorie",
+      "collection": "podkategorie"
+    }
+  }
+}

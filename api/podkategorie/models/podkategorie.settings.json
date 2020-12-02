@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podkategories",
+  "info": {
+    "name": "Podkategorie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "hodnota": {
+      "type": "string"
+    },
+    "kategorie": {
+      "model": "kategorie",
+      "via": "podkategorie"
+    }
+  }
+}

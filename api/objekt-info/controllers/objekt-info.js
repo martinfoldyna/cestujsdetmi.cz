@@ -20,5 +20,35 @@ module.exports = {
     }
 
     return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
+  },
+
+  async findMini(ctx) {
+    let entities;
+    if (ctx.query._q) {
+      entities = await strapi.services["objekt-info"].search(ctx.query);
+    } else {
+      entities = await strapi.services["objekt-info"].find(ctx.query, ["Nazev"]);
+    }
+
+    // TODO: Simplify removing by object keys and array
+    return entities.map(entity => {
+      const objekt = sanitizeEntity(entity, {
+        model: strapi.models["objekt-info"],
+      });
+
+      const skipItems = ["vnitrni_vybaveni", "vnejsi_vybaveni", "dostupnost", "recenze", "cenik", "slevy", "zajimavosti"];
+
+      const objektKeys = Object.keys(objekt);
+
+      for (let key of objektKeys) {
+        if (skipItems.indexOf(key) > -1) {
+          delete objekt[key]
+        }
+      }
+
+      return objekt;
+    });
+
+
   }
 };

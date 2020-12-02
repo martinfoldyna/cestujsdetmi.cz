@@ -7,7 +7,7 @@
   "options": {},
   "attributes": {
     "popis": {
-      "type": "richtext"
+      "type": "string"
     },
     "odkaz_na_web": {
       "type": "string"

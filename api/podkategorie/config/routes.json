@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/podkategories",
+      "handler": "podkategorie.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/podkategories/count",
+      "handler": "podkategorie.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/podkategories/:id",
+      "handler": "podkategorie.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/podkategories",
+      "handler": "podkategorie.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/podkategories/:id",
+      "handler": "podkategorie.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/podkategories/:id",
+      "handler": "podkategorie.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

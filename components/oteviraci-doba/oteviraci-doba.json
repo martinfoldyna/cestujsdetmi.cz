@@ -2,15 +2,16 @@
   "collectionName": "components_oteviraci_doba_oteviraci_dobas",
   "info": {
     "name": "Otevírací-doba",
-    "icon": "stopwatch"
+    "icon": "stopwatch",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "datum_zacatku": {
-      "type": "datetime"
+    "otevira_v": {
+      "type": "string"
     },
-    "datum_konce": {
-      "type": "datetime"
+    "zavira_v": {
+      "type": "string"
     },
     "popis": {
       "type": "string"

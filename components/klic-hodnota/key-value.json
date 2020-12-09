@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_klic_hodnota_key_values",
+  "info": {
+    "name": "KeyValue",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

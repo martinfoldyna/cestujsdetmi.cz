@@ -15,27 +15,22 @@
       "type": "string"
     },
     "druh_objektu": {
-      "type": "enumeration",
-      "enum": [
-        "ubytovani",
-        "zabava"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "druh_zapisu": {
-      "type": "enumeration",
-      "enum": [
-        "01_standard",
-        "02_optimal",
-        "03_premium",
-        "04_premium_gold"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "typ_objektu": {
-      "type": "enumeration",
-      "enum": [
-        "ubytovani",
-        "zabava"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
+    },
+    "typ_objektu_value": {
+      "type": "string"
     },
     "galerie": {
       "type": "json"
@@ -46,9 +41,6 @@
     "objekt": {
       "model": "objekty",
       "via": "objekt_info"
-    },
-    "nahledovy_obrazek": {
-      "type": "string"
     },
     "firebaseID": {
       "type": "uid"
@@ -103,7 +95,9 @@
       "via": "objekty"
     },
     "hlavni_kategorie": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "adresa": {
       "type": "component",
@@ -111,7 +105,9 @@
       "component": "adresa.adresa"
     },
     "podkategorie": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "email": {
       "type": "string"

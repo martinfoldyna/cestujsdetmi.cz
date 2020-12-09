@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/objekt-infos-minified/byOblast/:oblastId",
+      "handler": "objekt-info.findMiniByOblast",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/objekt-infos/count",
       "handler": "objekt-info.count",
       "config": {

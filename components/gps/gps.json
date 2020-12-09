@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_gps_gps",
+  "info": {
+    "name": "Gps",
+    "icon": "car-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lat": {
+      "type": "string"
+    },
+    "lng": {
+      "type": "string"
+    }
+  }
+}

@@ -10,13 +10,17 @@
       "type": "string"
     },
     "oblast": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "mesto": {
       "type": "string"
     },
     "kraj": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "klic-hodnota.key-value"
     },
     "psc": {
       "type": "string"

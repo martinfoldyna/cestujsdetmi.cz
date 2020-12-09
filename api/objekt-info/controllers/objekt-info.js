@@ -45,10 +45,25 @@ module.exports = {
           delete objekt[key]
         }
       }
-
       return objekt;
     });
-
-
+  },
+  async findMiniByOblast(ctx) {
+    let {oblastId} = ctx.params;
+    // let entities;
+    // if (ctx.query._q) {
+    //   entities = await strapi.services["objekt-info"].search(ctx.query);
+    // } else {
+    //   entities = await strapi.services["objekt-info"].find({adresa[]}, ["Nazev"]);
+    // }
+    const objects = await this.findMini(ctx);
+    if (objects) {
+      const filteredObjects = objects.filter(item => {
+        return item.adresa && item.adresa.oblast && item.adresa.oblast.key === oblastId
+      })
+      return filteredObjects
+    } else {
+      return null
+    }
   }
 };

@@ -36,7 +36,7 @@ module.exports = {
         model: strapi.models["objekt-info"],
       });
 
-      const skipItems = ["vnitrni_vybaveni", "vnejsi_vybaveni", "dostupnost", "recenze", "cenik", "slevy", "zajimavosti"];
+      const skipItems = ["vnitrni_vybaveni", "vnejsi_vybaveni", "dostupnost", "recenze", "cenik", "slevy", "zajimavosti", "podrobny_popis"];
 
       const objektKeys = Object.keys(objekt);
 

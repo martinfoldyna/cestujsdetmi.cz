@@ -14,15 +14,13 @@
     "nazev": {
       "type": "string"
     },
-    "druh_objektu": {
-      "type": "component",
-      "repeatable": false,
-      "component": "klic-hodnota.key-value"
-    },
     "druh_zapisu": {
       "type": "component",
       "repeatable": false,
       "component": "klic-hodnota.key-value"
+    },
+    "druh_zapisu_value": {
+      "type": "string"
     },
     "typ_objektu": {
       "type": "component",
@@ -32,15 +30,12 @@
     "typ_objektu_value": {
       "type": "string"
     },
+
     "galerie": {
       "type": "json"
     },
     "zakladni_popis": {
       "type": "richtext"
-    },
-    "objekt": {
-      "model": "objekty",
-      "via": "objekt_info"
     },
     "firebaseID": {
       "type": "uid"

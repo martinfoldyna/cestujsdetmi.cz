@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rady-a-tipies",
+      "handler": "rady-a-tipy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rady-a-tipies/count",
+      "handler": "rady-a-tipy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rady-a-tipies/:id",
+      "handler": "rady-a-tipy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rady-a-tipies",
+      "handler": "rady-a-tipy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rady-a-tipies/:id",
+      "handler": "rady-a-tipy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rady-a-tipies/:id",
+      "handler": "rady-a-tipy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

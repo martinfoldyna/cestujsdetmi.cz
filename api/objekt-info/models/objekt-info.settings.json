@@ -30,7 +30,21 @@
     "typ_objektu_value": {
       "type": "string"
     },
-
+    "adresa_kraj_value": {
+      "type": "string"
+    },
+    "adresa_oblast_value": {
+      "type": "string"
+    },
+    "adresa_mesto_value": {
+      "type": "string"
+    },
+    "kategorie_value": {
+      "type": "string"
+    },
+    "podkategorie_value": {
+      "type": "string"
+    },
     "galerie": {
       "type": "json"
     },

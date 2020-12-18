@@ -19,6 +19,12 @@ const Editor = ({ onChange, name, value }) => {
       <CKEditor
         editor={ClassicEditor}
         data={value}
+        config={{ heading: {
+            options: [
+              { model: 'heading3', view: 'h3', title: 'Nadpis', class: 'ck-heading_heading3' },
+              { model: 'paragraph', title: 'Text', class: 'ck-heading_paragraph' }
+            ]
+          }}}
         onChange={(event, editor) => {
           const data = editor.getData();
           onChange({ target: { name, value: data } });

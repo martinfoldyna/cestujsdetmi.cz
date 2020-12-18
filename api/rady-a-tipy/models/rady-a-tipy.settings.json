@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rady_a_tipies",
+  "info": {
+    "name": "Rady a tipy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "tags": {
+      "type": "string"
+    },
+    "kategorie": {
+      "type": "enumeration",
+      "enum": [
+        "cestujsdetmi_doporucuje",
+        "sportovani_s_detmi",
+        "deti_a_zdravi",
+        "zabava_dovolena_s_detmi"
+      ]
+    },
+    "obrazek": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

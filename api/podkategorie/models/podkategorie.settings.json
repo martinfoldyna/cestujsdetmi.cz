@@ -17,8 +17,8 @@
       "type": "string"
     },
     "kategorie": {
-      "model": "kategorie",
-      "via": "podkategorie"
+      "via": "podkategorie",
+      "model": "kategorie"
     }
   }
 }

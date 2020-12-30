@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/rady-a-tipies/related",
+      "handler": "rady-a-tipy.getRelated",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/rady-a-tipies/:id",
       "handler": "rady-a-tipy.findOne",
       "config": {

@@ -20,14 +20,31 @@
       "component": "klic-hodnota.key-value"
     },
     "druh_zapisu_value": {
+      "type": "enumeration",
+      "enum": [
+        "01_standard",
+        "02_optimal",
+        "03_premium",
+        "04_premium_gold"
+      ]
+    },
+
+    "typ_objektu": {
       "type": "string"
     },
-    "typ_objektu": {
-      "type": "component",
-      "repeatable": false,
-      "component": "klic-hodnota.key-value"
+    "adresa_ulice": {
+    "type": "string"
     },
-    "typ_objektu_value": {
+    "adresa_mesto": {
+    "type": "string"
+    },
+    "adresa_psc": {
+      "type": "string"
+    },
+    "adresa_kraj": {
+      "type": "string"
+    },
+    "adresa_oblast": {
       "type": "string"
     },
     "adresa_kraj_value": {
@@ -134,6 +151,17 @@
       "type": "component",
       "repeatable": true,
       "component": "recenze.recenze"
+    },
+    "last_minute_popis": {
+      "type": "string"
+    },
+    "last_minute_odkaz_na_web": {
+      "type": "string"
+    },
+    "last_minute_termin_zacatek": {
+      "type": "date"
+    },
+    "last_minute_termin_konec": {
+      "type": "date"
     }
-  }
-}
+}}

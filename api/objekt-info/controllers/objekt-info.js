@@ -30,6 +30,10 @@ module.exports = {
       entities = await strapi.services["objekt-info"].find(ctx.query, ["Nazev"]);
     }
 
+    // return entities.map(entity => sanitizeEntity(entity, {
+    //   model: strapi.models["objekt-info"],
+    // }))
+
     // TODO: Simplify removing by object keys and array
     return entities.map(entity => {
       const objekt = sanitizeEntity(entity, {

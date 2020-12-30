@@ -17,9 +17,6 @@
     "text": {
       "type": "richtext"
     },
-    "tags": {
-      "type": "string"
-    },
     "kategorie": {
       "type": "enumeration",
       "enum": [
@@ -39,6 +36,18 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "image_filename": {
+      "type": "string"
+    },
+    "image_name": {
+      "type": "string"
+    },
+    "page_keywords": {
+      "type": "string"
+    },
+    "perex": {
+      "type": "richtext"
     }
   }
 }

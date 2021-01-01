@@ -21,7 +21,8 @@ const Editor = ({ onChange, name, value }) => {
         data={value}
         config={{ heading: {
             options: [
-              { model: 'heading3', view: 'h3', title: 'Nadpis', class: 'ck-heading_heading3' },
+              { model: 'heading2', view: 'h2', title: '2. Nadpis', class: 'ck-heading_heading3' },
+              { model: 'heading3', view: 'h3', title: '3. Nadpis', class: 'ck-heading_heading3' },
               { model: 'paragraph', title: 'Text', class: 'ck-heading_paragraph' }
             ]
           }}}

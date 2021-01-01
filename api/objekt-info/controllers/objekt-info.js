@@ -1,7 +1,12 @@
 'use strict';
+const {convertToValue} = require("../../../helpers/helpers");
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
+  // Called before entry is created
+  beforeCreate: async (data) => {
+    data.hodnota = convertToValue(data);
+  },
   /**
    * Push new review to object
    * @return {Object|Array}

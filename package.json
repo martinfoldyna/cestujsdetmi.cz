@@ -16,6 +16,7 @@
     "@ckeditor/ckeditor5-react": "^2.1.0",
     "mongoose": "^5.11.4",
     "nodemailer": "^6.4.14",
+    "slugify": "^1.4.6",
     "strapi": "3.2.5",
     "strapi-admin": "3.2.5",
     "strapi-connector-mongoose": "3.2.5",

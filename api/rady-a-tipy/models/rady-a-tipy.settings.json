@@ -48,6 +48,9 @@
     },
     "perex": {
       "type": "richtext"
+    },
+    "hodnota": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/webkameries",
+      "handler": "webkamery.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webkameries/count",
+      "handler": "webkamery.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webkameries/:id",
+      "handler": "webkamery.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/webkameries",
+      "handler": "webkamery.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/webkameries/:id",
+      "handler": "webkamery.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/webkameries/:id",
+      "handler": "webkamery.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

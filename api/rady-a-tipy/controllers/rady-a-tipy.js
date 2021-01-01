@@ -7,6 +7,7 @@
 
 const sanitizeEntity = require("strapi-utils/lib/sanitize-entity");
 module.exports = {
+
   async getRelated(ctx) {
     if(ctx.query.tags) {
       const tagsQuery = ctx.query.tags;

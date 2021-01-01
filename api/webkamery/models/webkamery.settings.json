@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webkameries",
+  "info": {
+    "name": "webkamery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "page_title": {
+      "type": "string"
+    },
+    "page_keywords": {
+      "type": "string"
+    },
+    "adresa_oblast": {
+      "type": "string"
+    },
+    "adresa_kraj": {
+      "type": "string"
+    },
+    "adresa_mesto": {
+      "type": "string"
+    },
+    "hodnota": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "richtext"
+    },
+    "galerie": {
+      "type": "json"
+    },
+    "active": {
+      "type": "integer"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "page_description": {
+      "type": "string"
+    }
+  }
+}

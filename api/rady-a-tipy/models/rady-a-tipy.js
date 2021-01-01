@@ -5,4 +5,22 @@
  * to customize this model
  */
 
-module.exports = {};
+const slugify = require("slugify");
+
+
+module.exports = {
+  lifecycles: {
+    beforeCreate: async (data) => {
+      console.log(data)
+      if (data.nazev) {
+        data.hodnota = slugify(data.nazev.toLowerCase());
+      }
+    },
+    beforeUpdate: async (params, data) => {
+      console.log(data)
+      if (data.nazev) {
+        data.hodnota = slugify(data.nazev.toLowerCase());
+      }
+    },
+  },
+};

@@ -24,6 +24,8 @@ module.exports = {
       entity = await strapi.services["objekt-info"].update({ id }, ctx.request.body);
     }
 
+    await strapi.plugins["email"].services.email.send({to: "martifoldyna@gmail.com", from: "admin@cestujsdetmi.cz", subject: `Thank you for reviewing ${ctx.request.body.nazev}!`, text: "Thank you very much for helping out community to grow."})
+
     return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
   },
 

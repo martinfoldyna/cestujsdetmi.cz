@@ -59,16 +59,38 @@
       "via": "uzivatel",
       "collection": "objekt-info"
     },
-    "jmeno": {
+    "first_name": {
       "type": "string"
     },
-    "prijmeni": {
+    "last_name": {
       "type": "string"
     },
-    "adresa": {
-      "type": "component",
-      "repeatable": false,
-      "component": "adresa.adresa"
+    "address_street": {
+      "type": "string"
+    },
+    "address_zip": {
+      "type": "string"
+    },
+    "address_city": {
+      "type": "string"
+    },
+    "address_country": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "ic": {
+      "type": "string"
+    },
+    "dic": {
+      "type": "string"
+    },
+    "web": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }

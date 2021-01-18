@@ -6,19 +6,14 @@
   },
   "options": {},
   "attributes": {
-    "datum_zacatku": {
-      "type": "date",
-      "default": ""
-    },
-    "datum_konce": {
-      "type": "date",
-      "default": ""
+    "termin": {
+      "type": "string"
     },
     "popis": {
       "type": "string"
     },
     "cena": {
-      "type": "decimal"
+      "type": "string"
     }
   }
 }

@@ -15,11 +15,6 @@
       "type": "string"
     },
     "druh_zapisu": {
-      "type": "component",
-      "repeatable": false,
-      "component": "klic-hodnota.key-value"
-    },
-    "druh_zapisu_value": {
       "type": "enumeration",
       "enum": [
         "01_standard",
@@ -28,15 +23,14 @@
         "04_premium_gold"
       ]
     },
-
     "typ_objektu": {
       "type": "string"
     },
     "adresa_ulice": {
-    "type": "string"
+      "type": "string"
     },
     "adresa_mesto": {
-    "type": "string"
+      "type": "string"
     },
     "adresa_psc": {
       "type": "string"
@@ -62,8 +56,17 @@
     "podkategorie_value": {
       "type": "string"
     },
-    "galerie": {
+    "relative_galerie": {
       "type": "json"
+    },
+    "galerie": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     },
     "zakladni_popis": {
       "type": "richtext"
@@ -90,7 +93,7 @@
     "hodnota": {
       "type": "string"
     },
-    "cenik": {
+    "ceny": {
       "type": "component",
       "repeatable": true,
       "component": "cena.slevy"
@@ -155,7 +158,7 @@
     "last_minute_popis": {
       "type": "string"
     },
-    "last_minute_odkaz_na_web": {
+    "last_minute_odkaz": {
       "type": "string"
     },
     "last_minute_termin_zacatek": {
@@ -163,5 +166,12 @@
     },
     "last_minute_termin_konec": {
       "type": "date"
+    },
+    "page_description": {
+      "type": "string"
+    },
+    "page_keywords": {
+      "type": "string"
     }
-}}
+  }
+}

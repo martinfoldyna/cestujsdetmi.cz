@@ -13,6 +13,9 @@
     "zavira_v": {
       "type": "string"
     },
+    "doba": {
+      "type": "string"
+    },
     "popis": {
       "type": "string"
     }

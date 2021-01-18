@@ -49,6 +49,14 @@
       }
     },
     {
+      "method": "POST",
+      "path": "/objekt-infos/multiple",
+      "handler": "objekt-info.createMultiple",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "PUT",
       "path": "/objekt-infos/:id",
       "handler": "objekt-info.update",

@@ -76,5 +76,29 @@ module.exports = {
     } else {
       return null
     }
-  }
+  },
+
+  async createMultiple(ctx) {
+
+    const body = Array.isArray(ctx.request.body) ? ctx.request.body : [ctx.request.body];
+
+    const entities = []
+
+    for (let bodyItem of body) {
+        const newEntity = await strapi.services["objekt-info"].create(bodyItem);
+        entities.push(newEntity)
+    }
+    return entities;
+
+  },
+  async create(ctx) {
+    let entity;
+    if (ctx.is('multipart')) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services["objekt-info"].create(data, { galerie: files });
+    } else {
+      entity = await strapi.services["objekt-info"].create(ctx.request.body);
+    }
+    return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
+  },
 };

@@ -58,9 +58,9 @@ module.exports = {
       const docDefinition = await invoiceTemplate(data)
 
       const pdfDoc = await printer.createPdfKitDocument(docDefinition);
-      pdfDoc.pipe(fs.createWriteStream(`invoice02.pdf`))
-      pdfDoc.end()
-      // return pdfDoc;
+      // pdfDoc.pipe(fs.createWriteStream(`invoice02.pdf`))
+      // pdfDoc.end()
+      return pdfDoc;
     } catch (err) {
       throw err
     }

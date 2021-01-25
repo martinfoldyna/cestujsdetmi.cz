@@ -13,8 +13,15 @@ module.exports = {
   //   }
   // }
   send: async (ctx, next) => {
-    console.log(strapi.services.invoices.create());
 
-    return "generated"
+    try {
+      await strapi.services.invoices.create(ctx.request.body);
+
+      return "generated"
+    } catch (err) {
+      console.log(err)
+      throw err
+    }
+
   }
 };

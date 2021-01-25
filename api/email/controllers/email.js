@@ -11,10 +11,17 @@ module.exports = {
     strapi.log.debug(`Trying to send an email to ${sendTo}`)
 
     try {
+      const file = await strapi.services.invoices.create(body);
       const emailOptions = {
         to: sendTo,
         subject: "Happy new year!",
-        html: `<h1>Welcome!</h1><p>This is a test HTML email.</p>`
+        html: `<h1>Welcome!</h1><p>This is a test HTML email.</p>`,
+        attachments: [
+          {
+            filename: "file.pdf",
+            content: file
+          }
+        ]
       }
       await strapi.plugins["email"].services.email.send(emailOptions);
       strapi.log.debug(`Email sent to ${sendTo}`)

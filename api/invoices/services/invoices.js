@@ -1,7 +1,6 @@
 // 'use strict';
 const {invoiceTemplate} = require("./templates/templates");
 
-const fs = require("fs");
 const pdfmake = require("pdfmake");
 const Roboto = {
   Roboto: {
@@ -11,32 +10,6 @@ const Roboto = {
     bolditalics: 'fonts/Roboto-MediumItalic.ttf'
   }
 }
-const fonts = {
-  Courier: {
-    normal: 'Courier',
-    bold: 'Courier-Bold',
-    italics: 'Courier-Oblique',
-    bolditalics: 'Courier-BoldOblique'
-  },
-  Helvetica: {
-    normal: 'Helvetica',
-    bold: 'Helvetica-Bold',
-    italics: 'Helvetica-Oblique',
-    bolditalics: 'Helvetica-BoldOblique'
-  },
-  Times: {
-    normal: 'Times-Roman',
-    bold: 'Times-Bold',
-    italics: 'Times-Italic',
-    bolditalics: 'Times-BoldItalic'
-  },
-  Symbol: {
-    normal: 'Symbol'
-  },
-  ZapfDingbats: {
-    normal: 'ZapfDingbats'
-  }
-};
 // pdfmake.addFonts(Roboto);
 
 

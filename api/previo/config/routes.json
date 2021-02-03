@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/previo/hotelProperties",
+      "handler": "previo.getHotelProperties",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/previo/fetch/:path",
+      "handler": "previo.fetchPrevio",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/previo/hotels/:limit",
+      "handler": "previo.fetchAllHotels",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reklamni_banners",
+  "info": {
+    "name": "reklamni_banner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "odkaz": {
+      "type": "string"
+    },
+    "datum_zobrazeni_od": {
+      "type": "datetime"
+    },
+    "datum_zobrazeni_do": {
+      "type": "datetime"
+    },
+    "umisteni": {
+      "type": "enumeration",
+      "enum": [
+        "vypis_objektu_po_4_polozce",
+        "vypis_objektu_po_8_polozce",
+        "postranni_menu",
+        "paticka"
+      ],
+      "default": "vypis_objektu_po_4_polozce"
+    },
+    "nazev": {
+      "type": "string"
+    }
+  }
+}

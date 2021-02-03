@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/reklamni-banners",
+      "handler": "reklamni-banner.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reklamni-banners/count",
+      "handler": "reklamni-banner.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reklamni-banners/:id",
+      "handler": "reklamni-banner.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/reklamni-banners",
+      "handler": "reklamni-banner.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/reklamni-banners/:id",
+      "handler": "reklamni-banner.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/reklamni-banners/:id",
+      "handler": "reklamni-banner.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

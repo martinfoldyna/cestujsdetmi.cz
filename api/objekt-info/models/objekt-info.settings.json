@@ -71,9 +71,6 @@
     "zakladni_popis": {
       "type": "richtext"
     },
-    "firebaseID": {
-      "type": "uid"
-    },
     "podrobny_popis": {
       "type": "richtext"
     },
@@ -172,6 +169,14 @@
     },
     "page_keywords": {
       "type": "string"
+    },
+    "cenik": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cena.slevy"
+    },
+    "active_until": {
+      "type": "datetime"
     }
   }
 }

@@ -2,7 +2,8 @@
   "collectionName": "components_slevy_slevies",
   "info": {
     "name": "Cena",
-    "icon": "dollar-sign"
+    "icon": "dollar-sign",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,6 +14,12 @@
       "type": "string"
     },
     "cena": {
+      "type": "string"
+    },
+    "datum_zacatku": {
+      "type": "string"
+    },
+    "datum_konce": {
       "type": "string"
     }
   }

@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rss",
+      "handler": "rss.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rss/:id",
+      "handler": "rss.findOne",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

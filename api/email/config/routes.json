@@ -2,9 +2,13 @@
   "routes": [
     {
       "method": "POST",
-      "path": "/emails",
-      "handler": "Email.send",
+      "path": "/emails/invoice",
+      "handler": "Email.sendInvoice",
       "config": {}
+    },{
+      "method": "POST",
+      "path": "/emails",
+      "handler": "Email.send"
     }
   ]
 }

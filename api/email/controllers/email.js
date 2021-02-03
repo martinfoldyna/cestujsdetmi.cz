@@ -5,7 +5,7 @@
  */
 
 module.exports = {
-  send: async (ctx, next) => {
+  sendInvoice: async (ctx, next) => {
     const {body} = ctx.request;
     const sendTo = body.email;
     strapi.log.debug(`Trying to send an email to ${sendTo}`)
@@ -30,5 +30,8 @@ module.exports = {
       strapi.log.error(`Error sending email to ${sendTo}`, err)
       ctx.send({ error: 'Error sending email' })
     }
+  },
+  send: async (ctx, next) => {
+
   }
 };

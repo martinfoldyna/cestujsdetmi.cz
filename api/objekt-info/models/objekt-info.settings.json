@@ -177,6 +177,10 @@
     },
     "active_until": {
       "type": "datetime"
+    },
+    "verejni_uzivatele": {
+      "via": "oblibene",
+      "collection": "verejni-uzivatele"
     }
   }
 }

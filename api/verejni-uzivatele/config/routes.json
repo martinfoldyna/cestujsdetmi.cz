@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/verejni-uzivateles",
+      "handler": "verejni-uzivatele.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/verejni-uzivateles/count",
+      "handler": "verejni-uzivatele.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/verejni-uzivateles/:email",
+      "handler": "verejni-uzivatele.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/verejni-uzivateles",
+      "handler": "verejni-uzivatele.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/verejni-uzivateles/addToFavorite/:email",
+      "handler": "verejni-uzivatele.addToFavorite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/verejni-uzivateles/removeFavorite/:email",
+      "handler": "verejni-uzivatele.removeFavorite",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/verejni-uzivateles/:email",
+      "handler": "verejni-uzivatele.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/verejni-uzivateles/:id",
+      "handler": "verejni-uzivatele.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

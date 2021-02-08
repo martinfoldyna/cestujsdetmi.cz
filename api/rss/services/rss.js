@@ -1,6 +1,6 @@
 'use strict';
 const NodeCache = require( "node-cache" );
-const myCache = new NodeCache({stdTTL: 60, checkperiod: 90});
+const myCache = new NodeCache({ checkperiod: 90});
 const axios = require("axios");
 
 
@@ -12,13 +12,27 @@ const axios = require("axios");
 module.exports = {
   fetchRss: async () => {
     try {
+      console.log("Fetching rss from API")
+
       const response = await axios.get(`https://www.kudyznudy.cz/services/public/activities.ashx?key=${process.env.RSS_KEY}`);
       const { data } = response;
       return { success: true, data, error: null };
     } catch (error) {
       return { success: false, data: [], error }
     }
+  },
+  fetchRssById: async (id) => {
+    try {
+      console.log("Fetching rss from API by ID")
 
+      const response = await axios.get(`https://www.kudyznudy.cz/services/public/activity.ashx?key=${process.env.RSS_KEY}&id=${id}`)
+
+      const {data} = response;
+
+      return {success: true, data, error: null}
+    } catch (error) {
+      return {success: false, data: [], error}
+    }
   },
   fetchRSSandSave: async () => {
     const rss = await strapi.services.rss.fetchRss();
@@ -33,7 +47,9 @@ module.exports = {
     try {
       const obj = {objects: data, createdAt: new Date()}
 
-      const success = myCache.set("rss", obj)
+      const success = myCache.set("rss", obj);
+
+      console.log("State of saving rss to cache: ", success)
 
       return { success: true, data: obj, error: null };
     } catch (error) {

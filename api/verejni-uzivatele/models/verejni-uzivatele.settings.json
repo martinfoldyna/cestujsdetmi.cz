@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verejni_uzivateles",
+  "info": {
+    "name": "verejni_uzivatele",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "email": {
+      "type": "string",
+      "unique": true
+    },
+    "oblibene": {
+      "collection": "objekt-info",
+      "via": "verejni_uzivatele",
+      "dominant": true
+    },
+    "oblibene_externi": {
+      "type": "component",
+      "repeatable": true,
+      "component": "favorite-external.oblibene-externi"
+    }
+  }
+}

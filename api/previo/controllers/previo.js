@@ -8,7 +8,7 @@ const xml2js = require("xml2js")
  * to customize this controller
  */
 
-const previoUrl = "http://api.previo.cz/x1"
+const previoUrl = "https://api.previo.cz/x1"
 
 const parseXml = (xml) => {
   const parser = new xml2js.Parser({ explicitArray: false });
@@ -41,6 +41,7 @@ const xmlifyParams = (params) => {
 };
 
 module.exports = {
+
   async getHotelProperties(ctx) {
     const xmlSring = `<?xml version="1.0"?>
       <request>

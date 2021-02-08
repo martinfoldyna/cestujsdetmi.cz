@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_favorite_external_oblibene_externis",
+  "info": {
+    "name": "oblibene_externi",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "hotId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "string"
+    }
+  }
+}

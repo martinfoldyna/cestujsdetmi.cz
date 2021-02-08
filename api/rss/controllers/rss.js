@@ -9,28 +9,23 @@ const myCache = new NodeCache({stdTTL: 60, checkperiod: 90});
 
 module.exports = {
   async find(ctx) {
-    const rss = myCache.get("rss");
+    const rss = await strapi.services.rss.getRssFromStorage();
 
-    const keys = myCache.keys()
+    console.log(rss.data)
 
 
-    if (rss === undefined) {
+    if (rss.data === undefined) {
       return { success: false, data: [], error: {status: 404, statusMessage: "Not Found"} }
     }
 
-      return { success: true, data: rss.objects, error: null }
+      return { success: true, data: rss.data, error: null }
 
   },
   async findOne(ctx) {
     const { id } = ctx.params;
 
-    const cache = await strapi.services.rss.getRssFromStorage();
+    const rss = await strapi.services.rss.fetchRssById(id);
 
-    if (cache.objects) {
-      const foundItem = cache.objects.find(objektItem => objektItem.id === id)
-      return foundItem ? foundItem : null
-    } else {
-      return cache
-    }
+    return rss
   }
 };

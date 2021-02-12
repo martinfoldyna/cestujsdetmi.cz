@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "krajs",
+  "info": {
+    "name": "kraj",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "hodnota": {
+      "type": "string",
+      "unique": true
+    },
+    "nazev": {
+      "type": "string"
+    },
+    "objekt_infos": {
+      "collection": "objekt-info",
+      "via": "kraj"
+    },
+    "rady_a_tipies": {
+      "via": "kraj",
+      "collection": "rady-a-tipy"
+    },
+    "webkameries": {
+      "collection": "webkamery",
+      "via": "kraj"
+    },
+    "oblasts": {
+      "collection": "oblast",
+      "via": "kraj"
+    }
+  }
+}

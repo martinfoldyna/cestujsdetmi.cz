@@ -46,6 +46,14 @@
     },
     "page_description": {
       "type": "string"
+    },
+    "kraj": {
+      "via": "webkameries",
+      "model": "kraj"
+    },
+    "oblast": {
+      "via": "webkameries",
+      "model": "oblast"
     }
   }
 }

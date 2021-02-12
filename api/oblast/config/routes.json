@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/oblasts",
+      "handler": "oblast.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/oblasts/count",
+      "handler": "oblast.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/oblasts/:id",
+      "handler": "oblast.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/oblasts",
+      "handler": "oblast.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/oblasts/:id",
+      "handler": "oblast.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/oblasts/:id",
+      "handler": "oblast.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

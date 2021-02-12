@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_statistiky_statistiky",
+  "info": {
+    "name": "statistiky",
+    "icon": "home"
+  },
+  "options": {},
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "pocet_zobrazeni": {
+      "type": "number"
+    }
+  }
+}

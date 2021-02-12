@@ -7,8 +7,8 @@
       "config": {}
     },{
       "method": "POST",
-      "path": "/emails",
-      "handler": "Email.send"
+      "path": "/emails/create-objekt-inquiry",
+      "handler": "Email.createObjektInquiry"
     }
   ]
 }

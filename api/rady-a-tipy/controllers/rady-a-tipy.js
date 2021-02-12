@@ -26,6 +26,7 @@ module.exports = {
     } else {
      return await strapi.services["rady-a-tipy"].search(ctx.query)
     }
+
   },
   /**
    * Retrieve records.

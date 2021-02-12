@@ -15,7 +15,8 @@
       "type": "string"
     },
     "hodnota": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "urceni": {
       "type": "enumeration",

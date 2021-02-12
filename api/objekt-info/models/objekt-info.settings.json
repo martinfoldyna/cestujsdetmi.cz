@@ -26,6 +26,9 @@
     "typ_objektu": {
       "type": "string"
     },
+    "kraj_id": {
+      "type": "number"
+    },
     "adresa_ulice": {
       "type": "string"
     },
@@ -71,7 +74,7 @@
     "zakladni_popis": {
       "type": "richtext"
     },
-    "podrobny_popis": {
+    "popis": {
       "type": "richtext"
     },
     "konfigurace": {
@@ -181,6 +184,25 @@
     "verejni_uzivatele": {
       "via": "oblibene",
       "collection": "verejni-uzivatele"
+    },
+    "vnejsi_vybaveni_popis": {
+      "type": "string"
+    },
+    "vnitrni_vybaveni_popis": {
+      "type": "string"
+    },
+    "kraj": {
+      "via": "objekt_infos",
+      "model": "kraj"
+    },
+    "oblast": {
+      "via": "objekt_infos",
+      "model": "oblast"
+    },
+    "statistiky": {
+      "type": "component",
+      "repeatable": true,
+      "component": "statistiky.statistiky"
     }
   }
 }

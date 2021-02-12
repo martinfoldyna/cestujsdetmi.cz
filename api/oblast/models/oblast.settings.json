@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "oblasts",
+  "info": {
+    "name": "Oblast",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "hodnota": {
+      "type": "string",
+      "unique": true
+    },
+    "objekt_infos": {
+      "collection": "objekt-info",
+      "via": "oblast"
+    },
+    "rady_a_tipies": {
+      "via": "oblast",
+      "collection": "rady-a-tipy"
+    },
+    "webkameries": {
+      "collection": "webkamery",
+      "via": "oblast"
+    },
+    "kraj": {
+      "via": "oblasts",
+      "model": "kraj"
+    }
+  }
+}

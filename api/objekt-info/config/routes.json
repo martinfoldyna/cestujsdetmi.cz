@@ -49,9 +49,9 @@
       }
     },
     {
-      "method": "POST",
-      "path": "/objekt-infos/multiple",
-      "handler": "objekt-info.createMultiple",
+      "method": "GET",
+      "path": "/objekt-infos-importDb",
+      "handler": "objekt-info.importOldDb",
       "config": {
         "policies": []
       }

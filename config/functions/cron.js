@@ -59,9 +59,9 @@ module.exports = {
   //   await strapi.plugins["email"].services.email.send(emailOptions);
   //   strapi.log.debug(`Email sent to ${checkObjects[0].email}`)
   // },
-  '30 */1 * * *': async () => {
-    const response = await strapi.services.rss.fetchRSSandSave();
-    console.log(response);
-    console.warn("call rss function")
-  }
+  // '30 */1 * * *': async () => {
+  //   const response = await strapi.services.rss.fetchRSSandSave();
+  //   console.log(response);
+  //   console.warn("call rss function")
+  // }
 };

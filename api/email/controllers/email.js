@@ -31,7 +31,9 @@ module.exports = {
       ctx.send({ error: 'Error sending email' })
     }
   },
-  send: async (ctx, next) => {
+  createObjektInquiry: async (ctx, next) => {
+    const query = ctx.query;
 
+    console.log(query)
   }
 };

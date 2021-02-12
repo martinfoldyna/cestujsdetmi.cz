@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/krajs",
+      "handler": "kraj.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/krajs/count",
+      "handler": "kraj.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/krajs/:id",
+      "handler": "kraj.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/krajs",
+      "handler": "kraj.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/krajs/:id",
+      "handler": "kraj.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/krajs/:id",
+      "handler": "kraj.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

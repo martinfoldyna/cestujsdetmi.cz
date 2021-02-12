@@ -17,7 +17,8 @@ module.exports = {
     let finalUpdateBody = {}
 
     let finalFavorite = [];
-    let finalExternalFavorite = []
+    let finalExternalFavorite = [];
+    let finalRecommendations = [];
     if (body.oblibene) {
       body.oblibene.forEach((item, index) => {
         const foundFavoriteItem = user.oblibene.find((favoriteItem) => {
@@ -55,12 +56,31 @@ module.exports = {
           : user.oblibene_externi;
       }
 
+      if (body.rady_a_tipy) {
+        body.rady_a_tipy.forEach(item => {
+          const foundFavoriteItem = user.rady_a_tipy.find((favoriteItem) => {
+            console.log("favoriteId", favoriteItem.id);
+            console.log("paramId", item);
+            return favoriteItem.id === item.id;
+          });
+          if (!foundFavoriteItem) {
+            finalRecommendations.push(item);
+          }
+
+          finalUpdateBody.rady_a_tipy = finalRecommendations.length > 0 ?
+            user.rady_a_tipy && user.rady_a_tipy.length > 0
+              ? [...user.rady_a_tipy, ...finalRecommendations]
+              : finalRecommendations
+            : user.rady_a_tipy;
+        })
+      }
 
 
 
 
 
-    if (finalFavorite.length > 0 || finalExternalFavorite.length >0) {
+
+    if (finalFavorite.length > 0 || finalExternalFavorite.length >0 || finalRecommendations.length > 0) {
       entity = await strapi.services["verejni-uzivatele"].update(
         { _id: user._id },
         finalUpdateBody

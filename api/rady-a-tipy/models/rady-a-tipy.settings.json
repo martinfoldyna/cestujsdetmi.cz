@@ -29,8 +29,8 @@
         "zabava_dovolena_s_detmi"
       ]
     },
-    "obrazek": {
-      "model": "file",
+    "galerie": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -54,6 +54,19 @@
     },
     "hodnota": {
       "type": "string"
+    },
+    "verejni_uzivatele": {
+      "collection": "verejni-uzivatele",
+      "via": "rady_a_tipy",
+      "dominant": true
+    },
+    "kraj": {
+      "model": "kraj",
+      "via": "rady_a_tipies"
+    },
+    "oblast": {
+      "model": "oblast",
+      "via": "rady_a_tipies"
     }
   }
 }

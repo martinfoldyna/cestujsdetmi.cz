@@ -47,7 +47,7 @@
       "type": "boolean",
       "default": false
     },
-    "podrobny_popis": {
+    "popis": {
       "type": "boolean",
       "default": false
     },

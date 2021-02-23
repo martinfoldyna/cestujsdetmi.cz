@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mestos",
+  "info": {
+    "name": "mesto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "objekt_info": {
+      "model": "objekt-info",
+      "via": "mesto"
+    },
+    "old_id": {
+      "type": "integer"
+    }
+  }
+}

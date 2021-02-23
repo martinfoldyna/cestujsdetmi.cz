@@ -11,28 +11,38 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "hodnota": {
+    "key": {
       "type": "string",
       "unique": true
     },
-    "nazev": {
+    "value": {
       "type": "string"
     },
     "objekt_infos": {
+      "private": true,
       "collection": "objekt-info",
       "via": "kraj"
     },
     "rady_a_tipies": {
-      "via": "kraj",
-      "collection": "rady-a-tipy"
+      "private": true,
+      "collection": "rady-a-tipy",
+      "via": "kraj"
     },
     "webkameries": {
+      "private": true,
       "collection": "webkamery",
       "via": "kraj"
     },
     "oblasts": {
-      "collection": "oblast",
-      "via": "kraj"
+      "private": true,
+      "via": "kraj",
+      "collection": "oblast"
+    },
+    "old_id": {
+      "type": "integer"
+    },
+    "previo_id": {
+      "type": "integer"
     }
   }
 }

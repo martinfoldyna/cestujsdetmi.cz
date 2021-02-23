@@ -5,7 +5,14 @@
       "path": "/emails/invoice",
       "handler": "Email.sendInvoice",
       "config": {}
-    },{
+    },
+    {
+      "method": "POST",
+      "path": "/emails",
+      "handler": "Email.sendPlainEmail",
+      "config": {}
+    },
+    {
       "method": "POST",
       "path": "/emails/create-objekt-inquiry",
       "handler": "Email.createObjektInquiry"

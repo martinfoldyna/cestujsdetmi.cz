@@ -1,3 +1,6 @@
 module.exports = {
-  jwtSecret: process.env.JWT_SECRET || 'f334a5c9-cba1-4473-83a9-45bc38fdc33a'
+  jwtSecret: process.env.JWT_SECRET || '9d1c0b69-c049-4fcc-a889-36e6ae8b7a04',
+  jwt: {
+    expiresIn: "3600s"
+  }
 };

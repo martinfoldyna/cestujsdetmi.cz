@@ -7,7 +7,7 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
+    "timestamps": false,
     "draftAndPublish": false
   },
   "attributes": {
@@ -42,6 +42,9 @@
       "type": "string"
     },
     "adresa_oblast": {
+      "type": "string"
+    },
+    "gps": {
       "type": "string"
     },
     "adresa_kraj_value": {
@@ -121,7 +124,8 @@
     "uzivatel": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "objekty"
+      "via": "objekty",
+      "private": true
     },
     "hlavni_kategorie": {
       "type": "component",
@@ -167,16 +171,14 @@
     "last_minute_termin_konec": {
       "type": "date"
     },
+    "page_title": {
+      "type": "string"
+    },
     "page_description": {
       "type": "string"
     },
     "page_keywords": {
       "type": "string"
-    },
-    "cenik": {
-      "type": "component",
-      "repeatable": true,
-      "component": "cena.slevy"
     },
     "active_until": {
       "type": "datetime"
@@ -203,6 +205,16 @@
       "type": "component",
       "repeatable": true,
       "component": "statistiky.statistiky"
+    },
+    "mesto": {
+      "via": "objekt_info",
+      "model": "mesto"
+    },
+    "created_at": {
+      "type": "datetime"
+    },
+    "updated_at": {
+      "type": "datetime"
     }
   }
 }

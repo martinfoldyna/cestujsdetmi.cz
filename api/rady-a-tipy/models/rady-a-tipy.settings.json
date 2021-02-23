@@ -61,12 +61,12 @@
       "dominant": true
     },
     "kraj": {
-      "model": "kraj",
-      "via": "rady_a_tipies"
+      "via": "rady_a_tipies",
+      "model": "kraj"
     },
     "oblast": {
-      "model": "oblast",
-      "via": "rady_a_tipies"
+      "via": "rady_a_tipies",
+      "model": "oblast"
     }
   }
 }

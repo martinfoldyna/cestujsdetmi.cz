@@ -77,7 +77,7 @@
       "path": "/objekt-infos/:id",
       "handler": "objekt-info.delete",
       "config": {
-        "policies": []
+        "policies": ["global::alwaysFail"]
       }
     }
   ]

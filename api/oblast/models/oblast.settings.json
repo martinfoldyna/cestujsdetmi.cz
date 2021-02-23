@@ -11,28 +11,34 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "nazev": {
+    "value": {
       "type": "string"
     },
-    "hodnota": {
+    "key": {
       "type": "string",
-      "unique": true
+      "unique": false
     },
     "objekt_infos": {
       "collection": "objekt-info",
       "via": "oblast"
     },
     "rady_a_tipies": {
-      "via": "oblast",
-      "collection": "rady-a-tipy"
+      "collection": "rady-a-tipy",
+      "via": "oblast"
     },
     "webkameries": {
       "collection": "webkamery",
       "via": "oblast"
     },
     "kraj": {
-      "via": "oblasts",
-      "model": "kraj"
+      "model": "kraj",
+      "via": "oblasts"
+    },
+    "old_id": {
+      "type": "integer"
+    },
+    "previo_id": {
+      "type": "integer"
     }
   }
 }

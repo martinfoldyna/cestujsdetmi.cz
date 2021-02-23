@@ -66,16 +66,20 @@
       "type": "string"
     },
     "address_street": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "address_zip": {
-      "type": "string"
+      "type": "string",
+      "private":  true
     },
     "address_city": {
-      "type": "string"
+      "type": "string",
+      "private":  true
     },
     "address_country": {
-      "type": "string"
+      "type": "string",
+      "private":  true
     },
     "company": {
       "type": "string"

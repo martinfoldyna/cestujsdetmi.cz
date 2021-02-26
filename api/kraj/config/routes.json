@@ -10,6 +10,22 @@
     },
     {
       "method": "GET",
+      "path": "/krajs-woobjects",
+      "handler": "kraj.findWithoutObjects",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/krajs-woobjectswkrajs",
+      "handler": "kraj.findWoObjectsWKrajs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/krajs/count",
       "handler": "kraj.count",
       "config": {

@@ -16,7 +16,8 @@
     },
     "objekt_info": {
       "model": "objekt-info",
-      "via": "mesto"
+      "via": "mesto",
+      "private": true
     },
     "old_id": {
       "type": "integer"

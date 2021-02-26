@@ -10,6 +10,22 @@
     },
     {
       "method": "GET",
+      "path": "/oblasts-woobjects",
+      "handler": "oblast.findWithoutObjects",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/oblasts-woobjectswkrajs",
+      "handler": "oblast.findWoObjectsWKrajs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/oblasts/count",
       "handler": "oblast.count",
       "config": {

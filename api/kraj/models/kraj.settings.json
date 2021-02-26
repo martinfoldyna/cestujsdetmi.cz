@@ -34,7 +34,6 @@
       "via": "kraj"
     },
     "oblasts": {
-      "private": true,
       "via": "kraj",
       "collection": "oblast"
     },

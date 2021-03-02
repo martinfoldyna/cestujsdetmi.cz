@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/email-prijemcis",
+      "handler": "email-prijemci.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/email-prijemcis/count",
+      "handler": "email-prijemci.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/email-prijemcis/:id",
+      "handler": "email-prijemci.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/email-prijemcis",
+      "handler": "email-prijemci.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/email-prijemcis/:id",
+      "handler": "email-prijemci.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/email-prijemcis/:id",
+      "handler": "email-prijemci.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

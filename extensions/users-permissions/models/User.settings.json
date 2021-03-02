@@ -71,15 +71,15 @@
     },
     "address_zip": {
       "type": "string",
-      "private":  true
+      "private": true
     },
     "address_city": {
       "type": "string",
-      "private":  true
+      "private": true
     },
     "address_country": {
       "type": "string",
-      "private":  true
+      "private": true
     },
     "company": {
       "type": "string"

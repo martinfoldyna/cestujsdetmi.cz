@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emails",
+  "info": {
+    "name": "email",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "predmet": {
+      "type": "string"
+    },
+    "obsah": {
+      "type": "richtext"
+    },
+    "prijemci": {
+      "collection": "email-prijemci"
+    }
+  }
+}

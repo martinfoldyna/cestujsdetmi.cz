@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/objekt-infos-mini",
+      "handler": "objekt-info.justMini",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/objekt-infos-minified",
       "handler": "objekt-info.findMini",
       "config": {

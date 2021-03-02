@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_prijemci_prijemcis",
+  "info": {
+    "name": "prijemci",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "jmeno": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_prijemcis",
+  "info": {
+    "name": "emailPrijemci",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "prijemci": {
+      "type": "component",
+      "repeatable": true,
+      "component": "prijemci.prijemci"
+    },
+    "nazev": {
+      "type": "string"
+    },
+    "uzivatele_objektu": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "uzivatele_verejni": {
+      "collection": "verejni-uzivatele"
+    }
+  }
+}

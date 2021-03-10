@@ -18,8 +18,8 @@
     },
     {
       "method": "GET",
-      "path": "/krajs-woobjectswkrajs",
-      "handler": "kraj.findWoObjectsWKrajs",
+      "path": "/krajs-woobjectswoblasts",
+      "handler": "kraj.findWoObjectsWOblasts",
       "config": {
         "policies": []
       }

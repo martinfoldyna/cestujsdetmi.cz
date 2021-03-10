@@ -54,6 +54,10 @@
     "oblast": {
       "via": "webkameries",
       "model": "oblast"
+    },
+    "verejni_uzivateles": {
+      "via": "webkamery",
+      "collection": "verejni-uzivatele"
     }
   }
 }

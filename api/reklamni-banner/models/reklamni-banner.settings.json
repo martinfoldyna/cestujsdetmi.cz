@@ -2,16 +2,17 @@
   "kind": "collectionType",
   "collectionName": "reklamni_banners",
   "info": {
-    "name": "reklamni_banner"
+    "name": "reklamni_banner",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
-    "odkaz": {
-      "type": "string"
+    "script": {
+      "type": "text"
     },
     "datum_zobrazeni_od": {
       "type": "datetime"

@@ -220,20 +220,13 @@ module.exports = {
     return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
   },
   async justMini(ctx) {
-    // const entities = await strapi
-    //   .query("objekt-info")
-    //   .model.find(ctx.query)
-    //   .select("hodnota");
-    // return entities.map((entity) =>
-    //   sanitizeEntity(entity, { model: strapi.models["objekt-info"] })
-    // );
-
-    const entities = await strapi
-      .query("objekt-info")
-      .model.find(ctx.request)
-      .select("hodnota");
-    return entities.map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models["objekt-info"] })
-    );
+    // const entities = await strapi.services["objekt-info"].model
+    //   .fetchAll({
+    //     columns: ["", "hodnota"],
+    //   })
+    //   .then((data) => {
+    //     let output = data.toJSON();
+    //     return output;
+    //   });
   },
 };

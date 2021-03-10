@@ -21,6 +21,9 @@
     },
     "old_id": {
       "type": "integer"
+    },
+    "kraj_id": {
+      "type": "integer"
     }
   }
 }

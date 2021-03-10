@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/reklamni-banners-active",
+      "handler": "reklamni-banner.findActive",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/reklamni-banners/count",
       "handler": "reklamni-banner.count",
       "config": {

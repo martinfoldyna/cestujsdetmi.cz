@@ -56,8 +56,8 @@
       "type": "string"
     },
     "verejni_uzivatele": {
-      "collection": "verejni-uzivatele",
       "via": "rady_a_tipy",
+      "collection": "verejni-uzivatele",
       "dominant": true
     },
     "kraj": {

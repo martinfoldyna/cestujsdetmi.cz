@@ -11,19 +11,22 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "nazev": {
-      "type": "string"
-    },
-    "objekt_info": {
-      "model": "objekt-info",
-      "via": "mesto",
-      "private": true
+    "objekt_infos": {
+      "private": "true",
+      "collection": "objekt-info",
+      "via": "mesto"
     },
     "old_id": {
       "type": "integer"
     },
     "kraj_id": {
       "type": "integer"
+    },
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
     }
   }
 }

@@ -5,4 +5,9 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  getCityObjekts: async (ctx) => {
+    const entities = await strapi.services.mesto.find(ctx.query);
+    return entities
+  }
+};

@@ -206,15 +206,15 @@
       "repeatable": true,
       "component": "statistiky.statistiky"
     },
-    "mesto": {
-      "via": "objekt_info",
-      "model": "mesto"
-    },
     "created_at": {
       "type": "datetime"
     },
     "updated_at": {
       "type": "datetime"
+    },
+    "mesto": {
+      "via": "objekt_infos",
+      "model": "mesto"
     }
   }
 }

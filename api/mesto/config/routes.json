@@ -25,6 +25,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/mestos-getObjekts/:id",
+      "handler": "mesto.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/mestos",
       "handler": "mesto.create",

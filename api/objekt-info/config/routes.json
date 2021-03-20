@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/objekt-infos-fullText/:name",
+      "handler": "objekt-info.fullText",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/objekt-infos-mini",
       "handler": "objekt-info.justMini",
       "config": {

@@ -66,15 +66,6 @@ module.exports = {
         "zajimavosti",
         "popis",
       ];
-
-      const objektKeys = Object.keys(objekt);
-
-      for (let key of objektKeys) {
-        if (skipItems.indexOf(key) > -1) {
-          delete objekt[key];
-        }
-      }
-      return objekt;
     });
   },
   async findMiniByOblast(ctx) {
@@ -229,4 +220,13 @@ module.exports = {
     //     return output;
     //   });
   },
+  async fullText(ctx) {
+    const ubytovani = await strapi
+      .query("objekt-info").model.find({ "nazev": {"$regex": ctx.params.name, "$options": "i"}, "typ_objektu": "ubytovani" }).limit(10)
+
+    const vylety = await strapi
+      .query("objekt-info").model.find({ "nazev": {"$regex": ctx.params.name, "$options": "i"}, "typ_objektu": "zabava" }).limit(10)
+
+    return { ubytovani, vylety };
+  }
 };

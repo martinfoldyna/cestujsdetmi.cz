@@ -7,5 +7,9 @@ module.exports = ({ env }) => ({
     },
   },
   sendgrid_api_key: env('SENDGRID_API_KEY', ),
-  cron: {enabled: true}
+  cron: {enabled: true},
+  cors: {
+    enabled: true,
+    origin: ['*']
+  }
 });

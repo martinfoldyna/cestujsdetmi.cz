@@ -2,7 +2,7 @@
 const NodeCache = require( "node-cache" );
 const myCache = new NodeCache({ checkperiod: 90});
 const axios = require("axios");
-const {parseXML} = require("../../../helpers/helpers")
+const helpers = require("../../../helpers/helpers")
 
 
 /**
@@ -38,7 +38,7 @@ module.exports = {
   fetchRSSandSave: async () => {
     const rss = await strapi.services.rss.fetchRss();
     if (rss.success) {
-      const rssJSONData = await parseXML(rss.data);
+      const rssJSONData = await helpers.parseXml(rss.data);
       const save = await strapi.services.rss.saveRss(rssJSONData);
       return save
     } else {

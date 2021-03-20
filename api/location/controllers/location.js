@@ -7,7 +7,6 @@ module.exports = {
       .query("mesto")
       .model.find(ctx.query)
       .select("value key kraj_id");
-
     finalRes.mesta = cityEntities.map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.mesto })
     );
@@ -25,7 +24,7 @@ module.exports = {
       .query("oblast")
 
       .model.find(ctx.query)
-      .select("value key");
+      .select("value key kraj");
 
     finalRes.oblasti = oblastEntites.map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.oblast })

@@ -20,7 +20,7 @@ module.exports = {
     const entities = await strapi
       .query("kraj")
       .model.find(ctx.query)
-      .select("value key old_id oblast");
+      .select("value key old_id oblasts");
     return entities.map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.kraj })
     );

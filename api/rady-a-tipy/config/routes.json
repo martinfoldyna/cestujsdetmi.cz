@@ -10,6 +10,14 @@
     },
     {
       "method": "GET",
+      "path": "/rady-a-tipies-paths",
+      "handler": "rady-a-tipy.getPaths",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/rady-a-tipies/count",
       "handler": "rady-a-tipy.count",
       "config": {

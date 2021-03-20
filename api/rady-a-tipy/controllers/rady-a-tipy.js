@@ -28,6 +28,14 @@ module.exports = {
     }
 
   },
+
+  getPaths: async (ctx) => {
+    const entities = await strapi
+      .query("rady-a-tipy")
+      .model.find(ctx.query)
+      .select("hodnota");
+    return entities
+  }
   /**
    * Retrieve records.
    *

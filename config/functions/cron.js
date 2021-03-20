@@ -38,12 +38,13 @@ const checkSoonToExpire = async () => {
 
 module.exports = {
   /**
-   * Simple example.
-   * Every monday at 1am.
+   * Fetch rss news
+   * Every day at 8am.
    */
-  // '0 1 * * 1': () => {
-  //
-  // }
+  '0 8 * * *': async () => {
+    const response = await strapi.services.rss.fetchRSSandSave()
+    console.log(response);
+  }
   // '*/10 * * * * *': () => {
   //   const today = new Date()
   //   console.log(`Good morning, local time is: ${today.getHours()}:${today.getMinutes() < 10 ? '0' + today.getMinutes() : today.getMinutes()}`)

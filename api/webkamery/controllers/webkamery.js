@@ -5,4 +5,12 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  getPaths: async (ctx) => {
+    const entities = await strapi
+      .query("webkamery")
+      .model.find(ctx.query)
+      .select("hodnota");
+    return entities
+  }
+};

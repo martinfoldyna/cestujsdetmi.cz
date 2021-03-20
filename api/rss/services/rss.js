@@ -2,6 +2,7 @@
 const NodeCache = require( "node-cache" );
 const myCache = new NodeCache({ checkperiod: 90});
 const axios = require("axios");
+const {parseXML} = require("../../../helpers/helpers")
 
 
 /**
@@ -14,7 +15,7 @@ module.exports = {
     try {
       console.log("Fetching rss from API")
 
-      const response = await axios.get(`https://www.kudyznudy.cz/services/public/activities.ashx?key=${process.env.RSS_KEY}`);
+      const response = await axios.get(`https://www.kdykde.cz/export/index.php`);
       const { data } = response;
       return { success: true, data, error: null };
     } catch (error) {
@@ -37,7 +38,8 @@ module.exports = {
   fetchRSSandSave: async () => {
     const rss = await strapi.services.rss.fetchRss();
     if (rss.success) {
-      const save = await strapi.services.rss.saveRss(rss.data);
+      const rssJSONData = await parseXML(rss.data);
+      const save = await strapi.services.rss.saveRss(rssJSONData);
       return save
     } else {
       return rss

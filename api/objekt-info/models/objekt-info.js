@@ -6,18 +6,29 @@
  */
 
 const slugify = require("slugify");
+
+const generateValue = (name) => {
+  const today = new Date();
+  return `${today.getFullYear()}${today.getMonth()}${today.getDate()}-${slugify(
+    name.trim().toLowerCase()
+  )}`
+}
+
 module.exports = {
   lifecycles: {
     beforeCreate: async (data) => {
-      console.log(data)
       if (data.nazev && !data.hodnota) {
-        data.hodnota = slugify(data.nazev.toLowerCase());
+        let newValue = generateValue(data.nazev)
+        const doesExist = await strapi.services["objekt-info"].find({hodnota: newValue});
+        if (doesExist) {
+          newValue += '-2'
+        }
+        data.hodnota = newValue;
       }
     },
     beforeUpdate: async (params, data) => {
-      console.log(data)
       if (data.nazev && !data.hodnota) {
-        data.hodnota = slugify(data.nazev.toLowerCase());
+        data.hodnota = generateValue(data.nazev);
       }
     },
   },

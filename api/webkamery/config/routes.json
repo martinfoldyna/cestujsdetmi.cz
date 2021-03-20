@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/webkameries-getPaths",
+      "handler": "webkamery.getPaths",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/webkameries/:id",
       "handler": "webkamery.findOne",
       "config": {

@@ -14,6 +14,10 @@
     "nazev": {
       "type": "string"
     },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
     "druh_zapisu": {
       "type": "enumeration",
       "enum": [

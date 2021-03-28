@@ -1,0 +1,14 @@
+{
+  "collectionName": "newsletters",
+  "info": {
+    "name": "newsletter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {}
+}

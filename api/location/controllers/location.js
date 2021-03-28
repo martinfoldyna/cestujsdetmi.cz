@@ -2,7 +2,7 @@ const { sanitizeEntity } = require("strapi-utils/lib");
 
 module.exports = {
   async findAll(ctx) {
-    let finalRes = { mesta: [], kraje: [], oblasti: [], kategorie: [] };
+    let finalRes = { mesta: [], kraje: [], oblasti: [], kategorie: [], ads: [] };
     const cityEntities = await strapi
       .query("mesto")
       .model.find(ctx.query)
@@ -18,6 +18,19 @@ module.exports = {
     }).map((entity) =>
       sanitizeEntity(entity, { model: strapi.models.mesto })
     );
+
+    const today = new Date();
+
+    // `_sort=datum_zobrazeni_do:DESC&datum_zobrazeni_od_lte=${today.toISOString()}&datum_zobrazeni_do_gte=${today.toISOString()}`
+
+    const adsQuery = {
+      _sort: "datum_zobrazeni_do:DESC",
+      datum_zobrazeni_od_lte: today.toISOString(),
+      datum_zobrazeni_do_gte: today.toISOString()
+    }
+
+    const adsEntities = await strapi.services["reklamni-banner"].find(adsQuery)
+    finalRes.ads = adsEntities
 
     const krajEntities = await strapi
       .query("kraj")

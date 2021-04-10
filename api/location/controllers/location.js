@@ -29,8 +29,7 @@ module.exports = {
       datum_zobrazeni_do_gte: today.toISOString()
     }
 
-    const adsEntities = await strapi.services["reklamni-banner"].find(adsQuery)
-    finalRes.ads = adsEntities
+    finalRes.ads = await strapi.services["reklamni-banner"].find(adsQuery)
 
     const krajEntities = await strapi
       .query("kraj")

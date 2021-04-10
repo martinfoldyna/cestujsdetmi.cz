@@ -24,7 +24,6 @@
       "type": "enumeration",
       "enum": [
         "vypis_objektu_po_4_polozce",
-        "vypis_objektu_po_8_polozce",
         "postranni_menu",
         "paticka"
       ],

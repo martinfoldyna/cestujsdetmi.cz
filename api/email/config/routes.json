@@ -56,7 +56,7 @@
     },
     {
       "method": "POST",
-      "path": "/emails",
+      "path": "/emails-send-plain",
       "handler": "Email.sendPlainEmail",
       "config": {}
     },

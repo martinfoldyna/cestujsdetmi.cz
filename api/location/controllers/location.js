@@ -15,13 +15,9 @@ module.exports = {
         return 1;
       }
       return 0;
-    }).map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.mesto })
-    );
+    });
 
     const today = new Date();
-
-    // `_sort=datum_zobrazeni_do:DESC&datum_zobrazeni_od_lte=${today.toISOString()}&datum_zobrazeni_do_gte=${today.toISOString()}`
 
     const adsQuery = {
       _sort: "datum_zobrazeni_do:DESC",
@@ -44,9 +40,7 @@ module.exports = {
         return 1;
       }
       return 0;
-    }).map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.kraj })
-    );
+    });
 
     const oblastEntites = await strapi
       .query("oblast")
@@ -61,9 +55,7 @@ module.exports = {
         return 1;
       }
       return 0;
-    }).map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.oblast })
-    );
+    });
 
     const categoryEntities = await strapi.services.kategorie.find(ctx.query);
     finalRes.kategorie = categoryEntities.sort((a, b) => {
@@ -74,9 +66,7 @@ module.exports = {
         return 1;
       }
       return 0;
-    }).map((entity) =>
-      sanitizeEntity(entity, { model: strapi.models.kategorie })
-    );
+    });
 
     return finalRes;
   },

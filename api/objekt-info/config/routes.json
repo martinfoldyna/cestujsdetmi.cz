@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/objekt-infos-mini",
-      "handler": "objekt-info.justMini",
+      "handler": "objekt-info.findMini",
       "config": {
         "policies": []
       }
@@ -50,7 +50,7 @@
     },
     {
       "method": "GET",
-      "path": "/objekt-infos/:id",
+      "path": "/objekt-infos/:hodnota",
       "handler": "objekt-info.findOne",
       "config": {
         "policies": []

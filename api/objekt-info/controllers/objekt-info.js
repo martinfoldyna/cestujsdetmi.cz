@@ -6,6 +6,13 @@ const { convertToValue } = require("../../../helpers/helpers");
 const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
+  async findOne(ctx) {
+    const { hodnota } = ctx.params;
+
+    const entity = await strapi.services["objekt-info"].findOne({ hodnota });
+    return entity;
+  },
+
   /**
    * Push new review to object
    * @return {Object|Array}
@@ -210,15 +217,10 @@ module.exports = {
     }
     return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
   },
-  async justMini(ctx) {
-    // const entities = await strapi.services["objekt-info"].model
-    //   .fetchAll({
-    //     columns: ["", "hodnota"],
-    //   })
-    //   .then((data) => {
-    //     let output = data.toJSON();
-    //     return output;
-    //   });
+  async findMini(ctx) {
+    const entities = await strapi
+      .query("objekt-info").model.find(ctx.query).populate({path: "kraj", select: "value"}).populate({path:"mesto", select: "value"})
+    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["objekt-info"] }));
   },
   async fullText(ctx) {
     const ubytovani = await strapi

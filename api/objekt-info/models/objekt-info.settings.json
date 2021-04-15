@@ -126,10 +126,9 @@
       "component": "dostupnost.dostupnost"
     },
     "uzivatel": {
-      "plugin": "users-permissions",
-      "model": "user",
       "via": "objekty",
-      "private": true
+      "plugin": "users-permissions",
+      "model": "user"
     },
     "hlavni_kategorie": {
       "type": "component",

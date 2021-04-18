@@ -34,6 +34,22 @@
     },
     {
       "method": "GET",
+      "path": "/objekt-infos-last-minute",
+      "handler": "objekt-info.findLastMinute",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/objekt-infos-paths",
+      "handler": "objekt-info.findPaths",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/objekt-infos-minified/byOblast/:oblastId",
       "handler": "objekt-info.findMiniByOblast",
       "config": {

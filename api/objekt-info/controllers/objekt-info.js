@@ -218,9 +218,44 @@ module.exports = {
     return sanitizeEntity(entity, { model: strapi.models["objekt-info"] });
   },
   async findMini(ctx) {
+    const sort = ctx.query._sort ? ctx.query._sort.split(",").join(" ") : {};
+    const filter = ctx.query._filter;
+    const skip = parseInt(ctx.query._start);
+    const limit = parseInt(ctx.query._limit);
+    delete ctx.query._sort;
+    delete ctx.query._filter;
+    delete ctx.query._start;
+    delete ctx.query._limit;
     const entities = await strapi
-      .query("objekt-info").model.find(ctx.query).populate({path: "kraj", select: "value"}).populate({path:"mesto", select: "value"})
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["objekt-info"] }));
+      .query("objekt-info")
+      .model.find(
+        { ...ctx.query },
+        "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel",
+        { skip, limit }
+      )
+      .populate({ path: "kraj", select: "value" })
+      .populate({ path: "mesto", select: "value" })
+      .populate({ path: "oblast", select: "value" })
+      .sort(sort)
+    return entities;
+  },
+  async findLastMinute(ctx) {
+    const entities = await strapi
+      .query("objekt-info")
+      .model.find(
+        { last_minute_popis: { $ne: null }, druh_zapisu: "04_premium_gold" },
+        "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -kraj -mesto -oblast -galerie -active_until -page_keywords -page_description -relative_galerie",
+      )
+      .sort("-druh_zapisu -created_at")
+
+    return entities;
+  },
+  async findPaths(ctx) {
+    const entities = await strapi
+      .query("objekt-info").model.find({}, "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -relative_galerie -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -active -druh_zapisu -galerie -updated_at -created_at -active_until -page_keywords -page_description -page_title -zakladni_popis -podkategorie_value -kategorie_value -gps -adresa_ulice -nazev -hlavni_kategorie -adresa -podkategorie -recenze -__v -kraj -mesto -oblast -updated_by")
+    return entities;
+
+
   },
   async fullText(ctx) {
     const ubytovani = await strapi

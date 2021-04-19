@@ -12,5 +12,11 @@ module.exports = {
       .model.find(ctx.query)
       .select("hodnota");
     return entities
-  }
+  },
+  async findOne(ctx) {
+    const { hodnota } = ctx.params;
+
+    const entity = await strapi.services["objekt-info"].findOne({ hodnota });
+    return entity;
+  },
 };

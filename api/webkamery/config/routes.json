@@ -26,7 +26,7 @@
     },
     {
       "method": "GET",
-      "path": "/webkameries/:id",
+      "path": "/webkameries/:hodnota",
       "handler": "webkamery.findOne",
       "config": {
         "policies": []

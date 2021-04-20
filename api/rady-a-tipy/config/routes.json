@@ -34,7 +34,7 @@
     },
     {
       "method": "GET",
-      "path": "/rady-a-tipies/:id",
+      "path": "/rady-a-tipies/:hodnota",
       "handler": "rady-a-tipy.findOne",
       "config": {
         "policies": []

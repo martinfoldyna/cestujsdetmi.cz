@@ -16,7 +16,7 @@ module.exports = {
   async findOne(ctx) {
     const { hodnota } = ctx.params;
 
-    const entity = await strapi.services["objekt-info"].findOne({ hodnota });
+    const entity = await strapi.services.webkamery.findOne({ hodnota });
     return entity;
   },
 };

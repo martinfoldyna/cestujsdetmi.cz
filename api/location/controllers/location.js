@@ -1,5 +1,7 @@
 const { sanitizeEntity } = require("strapi-utils/lib");
 
+const today = new Date();
+
 module.exports = {
   async findAll(ctx) {
     let finalRes = { mesta: [], kraje: [], oblasti: [], kategorie: [], ads: [] };
@@ -17,15 +19,10 @@ module.exports = {
       return 0;
     });
 
-    const today = new Date();
-
-    const adsQuery = {
-      _sort: "datum_zobrazeni_do:DESC",
-      datum_zobrazeni_od_lte: today.toISOString(),
-      datum_zobrazeni_do_gte: today.toISOString()
-    }
-
-    finalRes.ads = await strapi.services["reklamni-banner"].find(adsQuery)
+    finalRes.ads = await strapi
+      .query("reklamni-banner")
+      .model.find({ datum_zobrazeni_od: { $lte: today.toISOString() }, datum_zobrazeni_do: {$gte: today.toISOString()} })
+      .sort("-datum_zobrazeni_do");
 
     const krajEntities = await strapi
       .query("kraj")

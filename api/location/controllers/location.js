@@ -1,6 +1,7 @@
 const { sanitizeEntity } = require("strapi-utils/lib");
 
 const today = new Date();
+const todayString = today.toISOString()
 
 module.exports = {
   async findAll(ctx) {
@@ -21,7 +22,7 @@ module.exports = {
 
     finalRes.ads = await strapi
       .query("reklamni-banner")
-      .model.find({ datum_zobrazeni_od: { $lte: today.toISOString() }, datum_zobrazeni_do: {$gte: today.toISOString()} })
+      .model.find({ datum_zobrazeni_od: { $lte: todayString }, datum_zobrazeni_do: {$gte: todayString} })
       .sort("-datum_zobrazeni_do");
 
     const krajEntities = await strapi

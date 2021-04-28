@@ -10,8 +10,48 @@
     },
     {
       "method": "GET",
+      "path": "/rss/count",
+      "handler": "rss.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/rss/:id",
       "handler": "rss.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rss-paths",
+      "handler": "rss.getPaths",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rss",
+      "handler": "rss.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rss/:id",
+      "handler": "rss.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rss/:id",
+      "handler": "rss.delete",
       "config": {
         "policies": []
       }

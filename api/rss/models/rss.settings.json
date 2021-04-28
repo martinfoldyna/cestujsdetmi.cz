@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rsses",
+  "info": {
+    "name": "rss"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nazev": {
+      "type": "string"
+    },
+    "misto": {
+      "type": "string"
+    },
+    "popis": {
+      "type": "richtext"
+    },
+    "img": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "dateFrom": {
+      "type": "string"
+    },
+    "dateTo": {
+      "type": "string"
+    }
+  }
+}

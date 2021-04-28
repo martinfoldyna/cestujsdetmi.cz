@@ -246,7 +246,7 @@ module.exports = {
       .query("objekt-info")
       .model.find(
         { last_minute_popis: { $ne: null }, druh_zapisu: "04_premium_gold" },
-        "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -kraj -mesto -oblast -galerie -active_until -page_keywords -page_description -relative_galerie",
+        "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -kraj -mesto -oblast -galerie -active_until -page_keywords -page_description -relative_galerie",
         {limit}
       )
       .sort("-druh_zapisu -created_at")

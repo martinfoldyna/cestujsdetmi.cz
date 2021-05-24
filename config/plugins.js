@@ -4,25 +4,11 @@
 
 module.exports = ({env}) => ({
   upload: {
-    provider: 'google-cloud-storage',
+    provider: 'cloudinary',
     providerOptions: {
-      bucketName: process.env.STORAGE_BUCKET_NAME,
-      publicFiles: true,
-      uniform: false,
-      baseUrl: `https://storage.googleapis.com/${process.env.STORAGE_BUCKET_NAME}`,
-      basePath: "",
-      serviceAccount: {
-        type: process.env.STORAGE_TYPE,
-        project_id: process.env.STORAGE_PROJECT_ID,
-        private_key_id: process.env.STORAGE_PRIVATE_KEY_ID,
-        private_key: process.env.STORAGE_PRIVATE_KEY,
-        client_email: process.env.STORAGE_CLIENT_EMAIL,
-        client_id: process.env.STORAGE_CLIENT_ID,
-        auth_uri: process.env.STORAGE_AUTH_URI,
-        token_uri: process.env.STORAGE_TOKEN_URI,
-        auth_provider_x509_cert_url: process.env.STORAGE_AUTH_PROVIDER_X509_CERT_URL,
-        client_x509_cert_url: process.env.STORAGE_CLIENT_X509_CERT_URL,
-      },
+      cloud_name: env("CLOUDINARY_NAME"),
+      api_key: env("CLOUDINARY_KEY"),
+      api_secret: env("CLOUDINARY_SECRET")
     }
   },
   email: {

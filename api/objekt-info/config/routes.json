@@ -81,14 +81,6 @@
       }
     },
     {
-      "method": "GET",
-      "path": "/objekt-infos-importDb",
-      "handler": "objekt-info.importOldDb",
-      "config": {
-        "policies": []
-      }
-    },
-    {
       "method": "PUT",
       "path": "/objekt-infos/:id",
       "handler": "objekt-info.update",

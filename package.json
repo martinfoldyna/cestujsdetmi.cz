@@ -10,7 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^23.0.0",
+    "@ckeditor/ckeditor5-build-classic": "^23.1.0",
     "@ckeditor/ckeditor5-heading": "^24.0.0",
     "@ckeditor/ckeditor5-react": "^2.1.0",
     "axios": "^0.21.1",
@@ -32,6 +32,7 @@
     "strapi-plugin-upload": "3.5.3",
     "strapi-plugin-users-permissions": "3.5.3",
     "strapi-provider-email-nodemailer": "^3.4.1",
+    "strapi-provider-upload-cloudinary": "^3.6.2",
     "strapi-provider-upload-firebase": "^0.0.4",
     "strapi-provider-upload-google-cloud-storage": "^3.1.6",
     "strapi-utils": "3.5.3",

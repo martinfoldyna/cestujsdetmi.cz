@@ -1,15 +1,11 @@
 "use strict";
-const axios = require("axios");
-const MongoClient = require("mongodb").MongoClient;
-
-const { convertToValue } = require("../../../helpers/helpers");
 const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async findOne(ctx) {
     const { hodnota } = ctx.params;
 
-    const entity = await strapi.query('objekt-info').model.find({hodnota, publicationState: "preview"});
+    const entity = await strapi.query('objekt-info').model.find({hodnota})
     return sanitizeEntity(entity, {
       model: strapi.models['objekt-info'],
     });

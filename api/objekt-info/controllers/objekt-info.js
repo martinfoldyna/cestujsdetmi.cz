@@ -5,7 +5,7 @@ module.exports = {
   async findOne(ctx) {
     const { hodnota } = ctx.params;
 
-    const entity = await strapi.query('objekt-info').model.find({hodnota})
+    const entity = await strapi.services["objekt-info"].findOne({ hodnota });
     return sanitizeEntity(entity, {
       model: strapi.models['objekt-info'],
     });

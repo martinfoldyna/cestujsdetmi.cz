@@ -10,9 +10,6 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^23.1.0",
-    "@ckeditor/ckeditor5-heading": "^24.0.0",
-    "@ckeditor/ckeditor5-react": "^2.1.0",
     "axios": "^0.21.1",
     "file-saver": "^2.0.5",
     "jszip": "^3.5.0",
@@ -26,6 +23,7 @@
     "strapi": "3.6.2",
     "strapi-admin": "3.6.2",
     "strapi-connector-mongoose": "3.6.2",
+    "strapi-plugin-ckeditor5": "^1.11.0",
     "strapi-plugin-content-manager": "3.6.2",
     "strapi-plugin-content-type-builder": "3.6.2",
     "strapi-plugin-email": "3.6.2",

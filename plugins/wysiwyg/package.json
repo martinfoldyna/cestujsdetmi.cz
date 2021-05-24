@@ -8,15 +8,8 @@
     "description": "Description of wysiwyg plugin."
   },
   "dependencies": {
-    "@buffetjs/core": "^3.3.6",
     "@ckeditor/ckeditor5-build-classic": "^27.1.0",
-    "@ckeditor/ckeditor5-react": "^3.0.2",
-    "lodash": "^4.17.21",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "strapi-helper-plugin": "^3.6.2",
-    "styled-components": "^5.3.0"
+    "@ckeditor/ckeditor5-react": "^3.0.2"
   },
   "author": {
     "name": "A Strapi developer",

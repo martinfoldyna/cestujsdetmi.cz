@@ -26,8 +26,8 @@
       "component": "favorite-external.oblibene-externi"
     },
     "rady_a_tipy": {
-      "collection": "rady-a-tipy",
-      "via": "verejni_uzivatele"
+      "via": "verejni_uzivatele",
+      "collection": "rady-a-tipy"
     },
     "webkamery": {
       "collection": "webkamery",

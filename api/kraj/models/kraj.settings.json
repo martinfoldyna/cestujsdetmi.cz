@@ -24,9 +24,9 @@
       "via": "kraj"
     },
     "rady_a_tipies": {
+      "via": "kraj",
       "private": true,
-      "collection": "rady-a-tipy",
-      "via": "kraj"
+      "collection": "rady-a-tipy"
     },
     "webkameries": {
       "private": true,

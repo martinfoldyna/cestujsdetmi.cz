@@ -38,7 +38,8 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "image_filename": {
       "type": "string"
@@ -67,6 +68,9 @@
     "oblast": {
       "via": "rady_a_tipies",
       "model": "oblast"
+    },
+    "page_title": {
+      "type": "string"
     }
   }
 }

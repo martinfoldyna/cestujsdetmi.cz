@@ -23,8 +23,8 @@
       "via": "oblast"
     },
     "rady_a_tipies": {
-      "collection": "rady-a-tipy",
-      "via": "oblast"
+      "via": "oblast",
+      "collection": "rady-a-tipy"
     },
     "webkameries": {
       "collection": "webkamery",

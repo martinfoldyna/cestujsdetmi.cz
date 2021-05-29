@@ -33,7 +33,7 @@ module.exports = {
     const entities = await strapi
       .query("rady-a-tipy")
       .model.find(ctx.query)
-      .select("hodnota");
+      .select("hodnota kategorie -galerie");
     return entities
   },
 

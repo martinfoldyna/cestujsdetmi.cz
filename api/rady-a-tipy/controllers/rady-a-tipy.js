@@ -41,7 +41,7 @@ module.exports = {
     const { hodnota } = ctx.params;
 
     const entity = await strapi.query("rady-a-tipy")
-      .model.find({hodnota});
+      .model.findOne({hodnota});
     return entity;
   },
   /**

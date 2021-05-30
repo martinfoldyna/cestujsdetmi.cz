@@ -40,7 +40,8 @@ module.exports = {
   async findOne(ctx) {
     const { hodnota } = ctx.params;
 
-    const entity = await strapi.services["rady-a-tipy"].findOne({ hodnota });
+    const entity = await strapi.query("rady-a-tipy")
+      .model.find({hodnota});
     return entity;
   },
   /**

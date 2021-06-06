@@ -50,14 +50,9 @@ module.exports = {
    * @return {Array}
    */
 
-  // async find(ctx) {
-  //   let entities;
-  //   if (ctx.query._q) {
-  //     entities = await strapi.services["rady-a-tipy"].search(ctx.query);
-  //   } else {
-  //     entities = await strapi.services["rady-a-tipy"].find(ctx.query);
-  //   }
-  //
-  //   return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["rady-a-tipy"] }));
-  // },
+  findPromo: async (ctx) => {
+    const entities = await strapi.query("rady-a-tipy").model.find({promo: true});
+
+    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["rady-a-tipy"] }));
+  },
 };

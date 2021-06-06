@@ -5,9 +5,10 @@ module.exports = {
   async findOne(ctx) {
     const { hodnota } = ctx.params;
 
-    const entity = await strapi.services["objekt-info"].findOne({ hodnota });
+    const entity = await strapi.query("objekt-info")
+      .model.findOne({ hodnota });
     return sanitizeEntity(entity, {
-      model: strapi.models['objekt-info'],
+      model: strapi.models["objekt-info"],
     });
   },
 
@@ -88,14 +89,14 @@ module.exports = {
     const entities = await strapi
       .query("objekt-info")
       .model.find(
-        { ...ctx.query },
+        { ...ctx.query, active: true },
         "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel",
         { skip, limit }
       )
       .populate({ path: "kraj", select: "value" })
       .populate({ path: "mesto", select: "value" })
       .populate({ path: "oblast", select: "value" })
-      .sort(sort)
+      .sort(sort);
     return entities;
   },
   async findLastMinute(ctx) {
@@ -106,26 +107,42 @@ module.exports = {
       .model.find(
         { last_minute_popis: { $ne: null }, druh_zapisu: "04_premium_gold" },
         "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -kraj -mesto -oblast -galerie -active_until -page_keywords -page_description -relative_galerie",
-        {limit}
+        { limit }
       )
-      .sort("-druh_zapisu -created_at")
+      .sort("-druh_zapisu -created_at");
 
     return entities;
   },
   async findPaths(ctx) {
     const entities = await strapi
-      .query("objekt-info").model.find({...ctx.query}, "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -relative_galerie -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -active -druh_zapisu -galerie -updated_at -created_at -active_until -page_keywords -page_description -page_title -zakladni_popis -podkategorie_value -kategorie_value -gps -adresa_ulice -nazev -hlavni_kategorie -adresa -podkategorie -recenze -__v -kraj -mesto -oblast -updated_by")
+      .query("objekt-info")
+      .model.find(
+        { ...ctx.query },
+        "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -relative_galerie -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel -active -druh_zapisu -galerie -updated_at -created_at -active_until -page_keywords -page_description -page_title -zakladni_popis -podkategorie_value -kategorie_value -gps -adresa_ulice -nazev -hlavni_kategorie -adresa -podkategorie -recenze -__v -kraj -mesto -oblast -updated_by"
+      );
     return entities;
-
-
   },
   async fullText(ctx) {
     const ubytovani = await strapi
-      .query("objekt-info").model.find({ "nazev": {"$regex": ctx.params.name, "$options": "i"}, "typ_objektu": "ubytovani" }).limit(10).populate({path: "kraj", select: "value"}).populate({path:"mesto", select: "value"})
+      .query("objekt-info")
+      .model.find({
+        nazev: { $regex: ctx.params.name, $options: "i" },
+        typ_objektu: "ubytovani",
+      })
+      .limit(10)
+      .populate({ path: "kraj", select: "value" })
+      .populate({ path: "mesto", select: "value" });
 
     const vylety = await strapi
-      .query("objekt-info").model.find({ "nazev": {"$regex": ctx.params.name, "$options": "i"}, "typ_objektu": "zabava" }).limit(10).populate({path: "kraj", select: "value"}).populate({path:"mesto", select: "value"})
+      .query("objekt-info")
+      .model.find({
+        nazev: { $regex: ctx.params.name, $options: "i" },
+        typ_objektu: "zabava",
+      })
+      .limit(10)
+      .populate({ path: "kraj", select: "value" })
+      .populate({ path: "mesto", select: "value" });
 
     return { ubytovani, vylety };
-  }
+  },
 };

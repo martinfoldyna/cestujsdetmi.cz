@@ -41,6 +41,14 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/rady-a-tipies-promo",
+      "handler": "rady-a-tipy.findPromo",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "POST",
       "path": "/rady-a-tipies",
       "handler": "rady-a-tipy.create",

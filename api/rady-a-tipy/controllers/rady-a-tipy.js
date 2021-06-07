@@ -51,7 +51,7 @@ module.exports = {
    */
 
   findPromo: async (ctx) => {
-    const entities = await strapi.query("rady-a-tipy").model.find({promo: true});
+    const entities = await strapi.query("rady-a-tipy").model.find({promo: true}).select("-galerie hodnota nazev promo kategorie perex");
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models["rady-a-tipy"] }));
   },

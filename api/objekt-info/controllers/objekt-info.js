@@ -6,7 +6,9 @@ module.exports = {
     const { hodnota } = ctx.params;
 
     const entity = await strapi.query("objekt-info")
-      .model.findOne({ hodnota });
+      .model.findOne({ hodnota }).populate({ path: "kraj", select: "value key" })
+      .populate({ path: "mesto", select: "value key" })
+      .populate({ path: "oblast", select: "value key" });
     return sanitizeEntity(entity, {
       model: strapi.models["objekt-info"],
     });

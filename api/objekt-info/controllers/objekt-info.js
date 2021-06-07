@@ -91,7 +91,7 @@ module.exports = {
     const entities = await strapi
       .query("objekt-info")
       .model.find(
-        { ...ctx.query, active: true },
+        { ...ctx.query },
         "-statistiky -provozni_doba -slevy -dostupnost -ceny -vnejsi_vybaveni -vnitrni_vybaveni -vnitrni_vybaveni_popis -vnejsi_vybaveni_popis -last_minute_odkaz -last_minute_popis -zajimavosti -web -telefon -email -popis -kraj_id -last_minute -uzivatel",
         { skip, limit }
       )

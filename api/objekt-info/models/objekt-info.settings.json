@@ -28,7 +28,11 @@
       ]
     },
     "typ_objektu": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "ubytovani",
+        "zabava"
+      ]
     },
     "kraj_id": {
       "type": "number"
@@ -61,10 +65,81 @@
       "type": "string"
     },
     "kategorie_value": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "------ubytovani------",
+        "ubytovani-na-statku",
+        "chata-chalupa",
+        "apartmany",
+        "hotel",
+        "penzion",
+        "kemp",
+        "botel",
+        "vila",
+        "------zabava------",
+        "adrenalin",
+        "fauna-a-flora",
+        "historie",
+        "kultura",
+        "pobyt-v-prirode-leto",
+        "pobyt-v-prirode-zima",
+        "vodni-zabava",
+        "zabava-pod-strechou"
+      ]
     },
     "podkategorie_value": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "adrenalinovy-park",
+        "bobova-draha",
+        "horolezecka-stena",
+        "lanove-centrum",
+        "motokary",
+        "akvarium",
+        "botanicka-zahrada",
+        "farma-ekofarma",
+        "lesopark",
+        "minizoo",
+        "ranc",
+        "tropicky-sklenik",
+        "zahrada",
+        "zoo",
+        "hrad",
+        "jeskyne",
+        "skanzen",
+        "uzkokolejna-vlakova-trat",
+        "zamek",
+        "zricenina",
+        "expozice-pro-deti",
+        "divadlo",
+        "kino-letni-kino",
+        "muzeum-galerie",
+        "vystava",
+        "dinopark",
+        "golf-minigolf",
+        "hriste",
+        "rozhledna",
+        "venkovni-areal",
+        "zabavni-park",
+        "lyzarska-skola",
+        "ski-areal",
+        "snowpark",
+        "aqua-park",
+        "bazen",
+        "koupaliste",
+        "plovarna",
+        "pruplavovy-kanal-vyletni-plavba",
+        "exkurze",
+        "expozice-pro-deti",
+        "golf-minigolf",
+        "hvezdarna-planetarium",
+        "lunapark",
+        "solna-jeskyne",
+        "sportovni-zarizeni",
+        "stadion",
+        "zabavni-cetnrum",
+        "restaurace"
+      ]
     },
     "relative_galerie": {
       "type": "json"

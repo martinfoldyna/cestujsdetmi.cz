@@ -88,8 +88,11 @@
       ]
     },
     "podkategorie_value": {
+      "required": false,
+      "default": "",
       "type": "enumeration",
       "enum": [
+        "",
         "adrenalinovy-park",
         "bobova-draha",
         "horolezecka-stena",
